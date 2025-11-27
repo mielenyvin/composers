@@ -112,9 +112,9 @@ function returnToTitle() {
 }
 
 .app-title {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 25px;
-  font-family: cursive;
+  /* font-family: cursive; */
   cursor: pointer;
 }
 

@@ -8,4 +8,12 @@ export default defineConfig({
     vue(),
     FullReload(['public/timeline/dist/**'])
   ],
+  server: {
+    proxy: {
+      "/api": {
+        target: "http://localhost:3001",
+        changeOrigin: true,
+      },
+    },
+  },
 })

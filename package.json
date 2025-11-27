@@ -8,6 +8,7 @@
   },
   "scripts": {
     "dev": "vite",
+    "server": "node server/soundcloudProxy.js",
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --fix --cache",
@@ -16,6 +17,9 @@
     "deploy:rsync": "rsync -az --delete --no-perms --no-owner --no-group -e \"ssh -i ~/.ssh/default_my\" dist/ root@139.59.136.231:/composers/"
   },
   "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "node-fetch": "^3.3.2",
     "vue": "^3.5.22"
   },
   "devDependencies": {
