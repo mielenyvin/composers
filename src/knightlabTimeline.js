@@ -88,6 +88,7 @@ export function initKnightlabTimeline(containerId) {
   let baseTimenavHeight = 75;
   let isCollapsed = false;
   const COLLAPSED_TIMENAV_HEIGHT = 20;
+  const MOBILE_WIDTH_BREAKPOINT = 640;
 
   // Apply timenav/story heights based on current slide
   function applyTimenavHeight(uniqueId, source) {
@@ -139,12 +140,13 @@ export function initKnightlabTimeline(containerId) {
       percent = COLLAPSED_TIMENAV_HEIGHT;
     }
 
-    // Adjust zoom level: default 4, but for specific index we could change it
-    let zoomLevel = 3;
-    if (index !== -1) {
-      // example: out-of-bounds check
-      zoomLevel = 4;
-    }
+    const viewportWidth =
+      (window.visualViewport && window.visualViewport.width) ||
+      window.innerWidth;
+    const isMobileMode = viewportWidth <= MOBILE_WIDTH_BREAKPOINT;
+    const zoomForTitle = isMobileMode ? 3 : 2;
+    const zoomForEvents = isMobileMode ? 4 : 3;
+    let zoomLevel = index === -1 ? zoomForTitle : zoomForEvents;
     if (typeof window.timeline.setZoom === "function") {
       window.timeline.setZoom(zoomLevel);
     }
@@ -281,7 +283,7 @@ export function initKnightlabTimeline(containerId) {
       if (timenav && !document.getElementById("collapse_timeline")) {
         const collapseBtn = document.createElement("button");
         collapseBtn.id = "collapse_timeline";
-        collapseBtn.innerHTML = "-"; // icon for collapse in expanded state
+        collapseBtn.innerHTML = "▼"; // icon for collapse in expanded state
 
         // Invisible barrier to block iframe interactions on mobile
         const barrier = document.createElement("div");
@@ -323,7 +325,7 @@ export function initKnightlabTimeline(containerId) {
       const currentSlide = window.timeline && window.timeline.current_id;
 
       // Update button icon depending on state
-      event.target.innerHTML = isCollapsed ? "+" : "-";
+      event.target.innerHTML = isCollapsed ? "▲" : "▼";
 
       const idForHeight = currentSlide || window.location.hash || "";
       applyTimenavHeight(idForHeight, "toggle-collapse");

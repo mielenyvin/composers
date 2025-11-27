@@ -5,8 +5,15 @@
       <button class="menu-button" @click="toggleMenu" aria-label="Toggle navigation menu">
         <span class="menu-icon"></span>
       </button>
-      <img class="logo" src="/timeline/images/favicon.png" alt="Logo" />
-      <div class="app-title">Composers</div>
+      <img
+        class="logo"
+        src="/timeline/images/favicon.png"
+        alt="Logo"
+        @click="returnToTitle"
+      />
+      <div class="app-title" role="button" @click="returnToTitle">
+        Composers
+      </div>
     </header>
 
     <!-- Side menu -->
@@ -94,18 +101,26 @@ function toggleMenu() {
 function closeMenu() {
   isMenuOpen.value = false;
 }
+
+function returnToTitle() {
+  if (window.timeline && typeof window.timeline.goToStart === "function") {
+    window.timeline.goToStart();
+  }
+}
 </script>
 
 <style scoped>
 .logo {
   height: 80%;
   object-fit: contain;
+  cursor: pointer;
 }
 
 .app-title {
   font-weight: 600;
   font-size: 25px;
   font-family: cursive;
+  cursor: pointer;
 }
 
 @media (max-width: 640px) {
