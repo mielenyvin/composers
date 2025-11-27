@@ -1799,6 +1799,12 @@ body {
   overflow-x: hidden;
   background: #ebebeb;
 }
+.tl-slide.tl-slide-titleslide .tl-slide-content-container .tl-slide-content .tl-text .tl-text-content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 @media screen and (max-width: 650px) {
   .tl-slide .tl-slide-content-container {
     padding-left: 35px;
@@ -2829,6 +2835,3 @@ body {
 .tl-rtl .tl-credit {
   text-align: left;
 }
-
-
-/*# sourceMappingURL=timeline.css.map*/

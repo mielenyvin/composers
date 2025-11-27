@@ -215,10 +215,83 @@ body {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-/* Невидимый барьер для блокировки iframe на мобилках */
-#collapse_timeline_barrier {
-  position: absolute;
-  z-index: 999;
+/* Custom SoundCloud playlist */
+.sc-player {
+  margin-top: 8px;
+  width: 100%;
+}
+
+.sc-player__status {
+  font-size: 14px;
+  color: #0f172a;
+}
+
+.sc-player__status--error {
+  color: #b91c1c;
+}
+
+.sc-track-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.sc-track {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 0;
+  margin: 0;
   background: transparent;
-  pointer-events: auto;
+  box-shadow: none;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-radius: 0;
+}
+.sc-track:first-child {
+  border-top: 1px solid #ddd;
+}
+
+.sc-track:last-child {
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.sc-track__button {
+  min-width: 30px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid #0f172a;
+  background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+  color: #f8fafc;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.2);
+  transition: transform 0.12s ease, box-shadow 0.12s ease,
+    background-color 0.12s ease, border-color 0.12s ease;
+}
+
+.sc-track__button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.24);
+}
+
+.sc-track__button[data-state="playing"] {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border-color: #047857;
+  box-shadow: 0 8px 18px rgba(16, 185, 129, 0.3);
+}
+
+.sc-track__title {
+  font-size: 13px;
+  font-weight: 400;
+  color: #0f172a;
+  line-height: 1.3;
 }

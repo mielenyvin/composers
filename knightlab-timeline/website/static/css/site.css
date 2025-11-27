@@ -72,3 +72,8 @@ img.make-step-2 {
   float: left;
   margin-right: 7px;
 }
+
+.tl-text-content {
+display: flex !important;
+align-items: center !important;
+}
