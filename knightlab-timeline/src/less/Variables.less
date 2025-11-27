@@ -1,0 +1,162 @@
+/*	VARIABLES
+	BASE
+----------------------------------------------------- */
+
+/* ICON PATH
+================================================== */
+@icon-path: 					"../../css/icons/";
+
+/* TYPEFACE
+================================================== */
+@font-serif: 					sans-serif;
+@font-sanserif:					sans-serif;
+
+@font-main:						@font-sanserif;
+@font-secondary:				@font-sanserif;
+
+@base-font-size: 				15px;
+@base-font-size-small: 			11px;
+@base-font-size-large: 			24px;
+@base-font-size-xlarge: 		28px;
+
+@base-line-height:				1.428571429;
+@base-line-height-computed:     floor(@base-font-size * @base-line-height);
+
+/* COLOR SCHEME
+================================================== */
+@color-background: 				#FFF;
+@color-foreground: 				#333;
+@color-dark: 					#000;
+
+@color-theme:					#c34528; //#DA0000;
+
+@color-theme-dark:				darken(@color-theme, 15);
+
+@color-theme-complement:		spin(@color-theme, 180);
+
+@color-theme-triad1:			spin(@color-theme, -135);
+@color-theme-triad2:			spin(@color-theme, 135);
+
+@color-theme-split1:			spin(@color-theme, -158);
+@color-theme-split2:			spin(@color-theme, 158);
+
+@color-text: 					lighten(@color-foreground,25);
+@color-header-text: 			@color-dark;
+
+@color-text-inverted:			darken(@color-background,5);
+@color-header-text-inverted:	@color-background;
+
+@color-text-credit:				#999999;
+
+/* UI COLOR
+================================================== */
+@ui-background-color:			darken(@color-background, 5);
+@ui-background-color-darker:	darken(@color-background, 10);
+@marker-color: 					darken(@ui-background-color,5);
+@marker-outline-color: 			darken(@ui-background-color,5);
+@marker-selected-text-color: 	@color-background;
+@marker-text-color: 			darken(@marker-color,15);
+@marker-dot-color: 				darken(@marker-color, 33);
+@marker-dot-hover-color: 		darken(@marker-dot-color, 33);
+
+@marker-color-menubar-button:	darken(@marker-color,15);
+
+@minor-ticks-color:				darken(@ui-background-color,20);
+@major-ticks-color:				darken(@minor-ticks-color,30);
+
+@minor-ticks-line-color: 		@minor-ticks-color;
+@major-ticks-line-color: 		darken(@minor-ticks-line-color,10);
+
+@timegroup-message-color:       darken(@ui-background-color-darker,2);
+
+@brand-color: 					darken(@ui-background-color,15);
+
+@era-color-0: 					#737373;
+@era-color-1: 					#8c8c8c;
+@era-color-2: 					#a6a6a6;
+@era-color-3: 					#bfbfbf;
+@era-color-4: 					#d9d9d9;
+@era-color-5: 					#f2f2f2;
+
+@marker-gray-01: #d96a6a; // red
+@marker-gray-02: #de7764;
+@marker-gray-03: #e3835e;
+@marker-gray-04: #e88e59; // red-orange
+@marker-gray-05: #ec9855;
+@marker-gray-06: #efa150; // orange
+@marker-gray-07: #f1aa4c;
+@marker-gray-08: #f4b345; // amber
+@marker-gray-09: #f6bc41;
+@marker-gray-10: #f8c53d; // yellow
+@marker-gray-11: #c8d257; // yellow-green
+@marker-gray-12: #b1d264;
+@marker-gray-13: #99d073;
+@marker-gray-14: #83cd80; // green
+@marker-gray-15: #6cc98d;
+@marker-gray-16: #57c49a; // green-teal
+@marker-gray-17: #4fc2ac;
+@marker-gray-18: #47bdbc; // teal
+@marker-gray-19: #46b4c9;
+@marker-gray-20: #48a9d3; // cyan-blue
+@marker-gray-21: #4b9fda;
+@marker-gray-22: #4f94df;
+@marker-gray-23: #5489e2;
+@marker-gray-24: #5a7fe4; // blue
+@marker-gray-25: #7584ff;
+@marker-gray-26: #8a82f6;
+@marker-gray-27: #7f63e6; // lighter indigo
+@marker-gray-28: #8b5fe0;
+@marker-gray-29: #9860d9;
+@marker-gray-30: #a565d2;
+@marker-gray-31: #b26acb;
+@marker-gray-32: #bf70c4;
+@marker-gray-33: #cc76bd;
+@marker-gray-34: #d87db6;
+@marker-gray-35: #e384af; // soft violet-magenta
+
+/* UI
+================================================== */
+@base-spacing: 					15px;
+@arrow-size: 					20px;
+
+// Note
+@note-color-background:         #fcf8e3;
+
+// Marker
+@time-marker-border-radius: 	4px;
+@marker-icon-size: 				24px;
+@marker-dot-offset: 			7px;
+
+// Time Axis
+@minor-ticks-width: 			50px;
+@major-ticks-width: 			100px;
+@minor-ticks-font-size: 		11px;
+@major-ticks-font-size: 		12px;
+@tick-padding: 					2px;
+@axis-height:					@minor-ticks-font-size + (@major-ticks-font-size*2) + (@tick-padding*2);
+
+// SlideNav
+@opacity-slide-nav-title:		15;
+@opacity-slide-nav-desc:		 0;
+@opacity-slide-nav-desc-hover:  50;
+@width-slide-nav:				100px;
+@margin-slide-nav:				10px;
+
+/* Animation
+================================================== */
+@animation-ease: 				cubic-bezier(0.770, 0.000, 0.175, 1.000);
+@animation-duration: 			1000ms;
+@animation-duration-fast: 		500ms;
+
+/* GFX
+================================================== */
+.base-sprite() {
+	background-image: url(storymap.png?v1.0);
+}
+
+.tl-timemarker-content-container {
+height: 24px!important;
+}
+.tl-timemarker-timespan-content {
+height: 24px!important;
+}
