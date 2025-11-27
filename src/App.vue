@@ -105,7 +105,7 @@ function closeMenu() {
 .app-title {
   font-weight: 600;
   font-size: 25px;
-  font-family: cursive !important;
+  font-family: cursive;
 }
 
 @media (max-width: 640px) {
