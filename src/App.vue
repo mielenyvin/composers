@@ -5,7 +5,7 @@
       <button class="menu-button" @click="toggleMenu" aria-label="Toggle navigation menu">
         <span class="menu-icon"></span>
       </button>
-      <img class="logo" src="/favicon.png" alt="Logo" />
+      <img class="logo" src="/timeline/images/favicon.png" alt="Logo" />
       <div class="app-title">Composers</div>
     </header>
 

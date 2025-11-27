@@ -140,10 +140,10 @@ export function initKnightlabTimeline(containerId) {
     }
 
     // Adjust zoom level: default 4, but for specific index we could change it
-    let zoomLevel = 4;
-    if (index === 40) {
+    let zoomLevel = 3;
+    if (index !== -1) {
       // example: out-of-bounds check
-      zoomLevel = 5;
+      zoomLevel = 4;
     }
     if (typeof window.timeline.setZoom === "function") {
       window.timeline.setZoom(zoomLevel);
@@ -163,68 +163,68 @@ export function initKnightlabTimeline(containerId) {
     }
   }
 
-function resizeToViewport() {
-  const viewport = window.visualViewport;
+  function resizeToViewport() {
+    const viewport = window.visualViewport;
 
-  // Height of the top bar from the Vue app
-  const topbar = document.querySelector(".topbar");
-  const topbarHeight = topbar ? topbar.offsetHeight : 0;
+    // Height of the top bar from the Vue app
+    const topbar = document.querySelector(".topbar");
+    const topbarHeight = topbar ? topbar.offsetHeight : 0;
 
-  const windowHeight = viewport ? viewport.height : window.innerHeight;
-  const windowWidth = viewport ? viewport.width : window.innerWidth;
+    const windowHeight = viewport ? viewport.height : window.innerHeight;
+    const windowWidth = viewport ? viewport.width : window.innerWidth;
 
-  // Use the width of the container's parent (content area),
-  // not the full window width
-  const parent = embed.parentElement;
-  const contentWidth = parent ? parent.clientWidth : windowWidth;
+    // Use the width of the container's parent (content area),
+    // not the full window width
+    const parent = embed.parentElement;
+    const contentWidth = parent ? parent.clientWidth : windowWidth;
 
-  // Height = viewport height minus top bar
-  const contentHeight = windowHeight - topbarHeight;
+    // Height = viewport height minus top bar
+    const contentHeight = windowHeight - topbarHeight;
 
-  embed.style.width = contentWidth + "px";
-  embed.style.height = contentHeight + "px";
+    embed.style.width = contentWidth + "px";
+    embed.style.height = contentHeight + "px";
 
-  if (window.timeline && typeof window.timeline.updateDisplay === "function") {
-    window.timeline.updateDisplay();
+    if (window.timeline && typeof window.timeline.updateDisplay === "function") {
+      window.timeline.updateDisplay();
+    }
   }
-}
 
   function positionCollapseControls() {
-  const timenav = document.querySelector(".tl-timenav");
-  const collapseBtn = document.getElementById("collapse_timeline");
-  const barrier = document.getElementById("collapse_timeline_barrier");
-  if (!timenav || !collapseBtn || !timenav.parentElement) {
-    return;
+    const timenav = document.querySelector(".tl-timenav");
+    const collapseBtn = document.getElementById("collapse_timeline");
+    const barrier = document.getElementById("collapse_timeline_barrier");
+    if (!timenav || !collapseBtn || !timenav.parentElement) {
+      return;
+    }
+
+    const container = timenav.parentElement;
+
+    // Кнопка должна позиционироваться относительно контейнера
+    const containerStyle = window.getComputedStyle(container);
+    if (containerStyle.position === "static") {
+      container.style.position = "relative";
+    }
+
+    const timenavRect = timenav.getBoundingClientRect();
+    const containerRect = container.getBoundingClientRect();
+    const btnRect = collapseBtn.getBoundingClientRect();
+
+    const rightPos = containerRect.right - timenavRect.right + 10;
+    const bottomPos = containerRect.bottom - timenavRect.top - 1;
+
+    // Явно убираем left, чтобы не тянуло влево
+    collapseBtn.style.left = "auto";
+    collapseBtn.style.right = rightPos + "px";
+    collapseBtn.style.bottom = bottomPos + "px";
+
+    if (barrier) {
+      barrier.style.left = "auto";
+      barrier.style.right = rightPos - 5 + "px";
+      barrier.style.bottom = bottomPos - 5 + "px";
+      barrier.style.width = btnRect.width + 10 + "px";
+      barrier.style.height = btnRect.height + 10 + "px";
+    }
   }
-
-  const container = timenav.parentElement;
-
-  // Кнопка должна позиционироваться относительно контейнера
-  const containerStyle = window.getComputedStyle(container);
-  if (containerStyle.position === "static") {
-    container.style.position = "relative";
-  }
-
-  const timenavRect = timenav.getBoundingClientRect();
-  const containerRect = container.getBoundingClientRect();
-  const btnRect = collapseBtn.getBoundingClientRect();
-
-  const rightPos = containerRect.right - timenavRect.right + 10;
-  const bottomPos = containerRect.bottom - timenavRect.top - 1;
-
-  // Явно убираем left, чтобы не тянуло влево
-  collapseBtn.style.left = "auto";
-  collapseBtn.style.right = rightPos + "px";
-  collapseBtn.style.bottom = bottomPos + "px";
-
-  if (barrier) {
-    barrier.style.left = "auto";
-    barrier.style.right = rightPos - 5 + "px";
-    barrier.style.bottom = bottomPos - 5 + "px";
-    barrier.style.width = btnRect.width + 10 + "px";
-    barrier.style.height = btnRect.height + 10 + "px";
-  }
-}
 
   // Shift timenav center a bit to the left
   const LEFT_BIAS = 0.1; // 10% from left instead of 50% center

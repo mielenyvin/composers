@@ -83,8 +83,8 @@ export class TimeMarker {
 		// End date
 		this.has_end_date = false;
 
-        // Alternative text
-        this.ariaLabel = '';
+		// Alternative text
+		this.ariaLabel = '';
 
 		// Merge Data and Options
 		mergeData(this.options, options);
@@ -119,17 +119,17 @@ export class TimeMarker {
 			this._el.container.className = 'tl-timemarker';
 		}
 
-        this._el.container.ariaLabel = this.ariaLabel;
-        if (this.active) {
-            this._el.container.ariaLabel += ', shown';
-        } else {
-            this._el.container.ariaLabel += ', press space to show';
-        }
+		this._el.container.ariaLabel = this.ariaLabel;
+		if (this.active) {
+			this._el.container.ariaLabel += ', shown';
+		} else {
+			this._el.container.ariaLabel += ', press space to show';
+		}
 	}
 
-    setFocus(options = { preventScroll: true }) {
-        this._el.container.focus(options);
-    }
+	setFocus(options = { preventScroll: true }) {
+		this._el.container.focus(options);
+	}
 
 	addTo(container) {
 		container.appendChild(this._el.container);
@@ -238,20 +238,20 @@ export class TimeMarker {
 		this._el.timespan.style.height = remainder - 7 + "px";
 	}
 
-    getFormattedDate() {
-        if (trim(this.data.display_date).length > 0) {
-            return this.data.display_date;
-        }
+	getFormattedDate() {
+		if (trim(this.data.display_date).length > 0) {
+			return this.data.display_date;
+		}
 
-        let date_text = "";
-        if (this.data.end_date) {
-            date_text = " to " + this.data.end_date.getDisplayDate(this.getLanguage());
-        }
-        if (this.data.start_date) {
-            date_text = (date_text ? "from " : "") + this.data.start_date.getDisplayDate(this.getLanguage()) + date_text;
-        }
-        return date_text;
-    }
+		let date_text = "";
+		if (this.data.end_date) {
+			date_text = " to " + this.data.end_date.getDisplayDate(this.getLanguage());
+		}
+		if (this.data.start_date) {
+			date_text = (date_text ? "from " : "") + this.data.start_date.getDisplayDate(this.getLanguage()) + date_text;
+		}
+		return date_text;
+	}
 
 	/*	Events
 	================================================== */
@@ -259,22 +259,22 @@ export class TimeMarker {
 		this.fire("markerclick", { unique_id: this.data.unique_id });
 	}
 
-    _onMarkerKeydown(e) {
-        if (/Space|Enter/.test(e.code)) {
-            this.fire("markerclick", { unique_id: this.data.unique_id });
-        }
-    }
+	_onMarkerKeydown(e) {
+		if (/Space|Enter/.test(e.code)) {
+			this.fire("markerclick", { unique_id: this.data.unique_id });
+		}
+	}
 
-    _onMarkerBlur(e) {
-        this.fire("markerblur", { unique_id: this.data.unique_id });
-    }
+	_onMarkerBlur(e) {
+		this.fire("markerblur", { unique_id: this.data.unique_id });
+	}
 
 	/*	Private Methods
 	================================================== */
 	_initLayout() {
 		// Create Layout
 		this._el.container = DOM.create("div", "tl-timemarker");
-        this._el.container.setAttribute('tabindex', '-1');
+		this._el.container.setAttribute('tabindex', '-1');
 
 		if (this.data.unique_id) {
 			this._el.container.id = this.data.unique_id + "-marker";
@@ -328,8 +328,8 @@ export class TimeMarker {
 
 		this._setupResponsiveHeadline();
 
-        const date = this.getFormattedDate();
-        this.ariaLabel = `${this._text.innerHTML}, ${date}`;
+		const date = this.getFormattedDate();
+		this.ariaLabel = `${this._text.innerHTML}, ${date}`;
 
 		// Fire event that the slide is loaded
 		this.onLoaded();
@@ -338,8 +338,8 @@ export class TimeMarker {
 
 	_initEvents() {
 		DOMEvent.addListener(this._el.container, 'click', this._onMarkerClick, this);
-        DOMEvent.addListener(this._el.container, 'keydown', this._onMarkerKeydown, this);
-        DOMEvent.addListener(this._el.container, 'blur', this._onMarkerBlur, this);
+		DOMEvent.addListener(this._el.container, 'keydown', this._onMarkerKeydown, this);
+		DOMEvent.addListener(this._el.container, 'blur', this._onMarkerBlur, this);
 	}
 
 	// Update Display
@@ -405,10 +405,32 @@ export class TimeMarker {
 		if (!text) {
 			return text;
 		}
-		const parts = text.trim().split(/\s+/);
-		return parts.length ? parts[parts.length - 1] : text;
-	}
 
+		const parts = text.trim().split(/\s+/);
+		if (!parts.length) {
+			return text;
+		}
+
+		// Если всего одно слово - возвращаем его как есть
+		if (parts.length === 1) {
+			return parts[0];
+		}
+
+		const lastIndex = parts.length - 1;
+		const last = parts[lastIndex];
+		const prev = parts[lastIndex - 1];
+
+		const isSingleChar = last.length === 1;
+		const isRomanNumeral = /^[IVXLCDM]+$/.test(last); // II, III, IV, V, VI, ...
+
+		// Если последнее слово очень короткое или римская цифра - берём два последних
+		if (isSingleChar || isRomanNumeral) {
+			return `${prev} ${last}`;
+		}
+
+		// Иначе - только последнее слово
+		return last;
+	}
 }
 
 
