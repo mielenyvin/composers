@@ -23,7 +23,6 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
-/* базовые стили для контейнера, можно потом донастроить */
 #timeline-embed {
   width: 100%;
   height: 100%;
