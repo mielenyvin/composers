@@ -1,0 +1,533 @@
+{
+  "title": {
+    "media": {
+      "url": ""
+    },
+    "text": {
+      "headline": "The Story of Classical Music",
+      "text": "<p id=\"firstblock\">Explore the lives of classical composers, discover key moments from their biographies, and listen to their music, from Vivaldi in 1678 to the late 20th century.</p>"
+    }
+  },
+  "events": [
+    {
+      "start_date": {
+        "year": 1678
+      },
+      "end_date": {
+        "year": 1741
+      },
+      "text": {
+        "headline": "Antonio Vivaldi",
+        "markdown_id": "vivaldi",
+        "essentials_label": "Vivaldi essentials",
+        "image_url": "/timeline/images/vivaldi.png",
+        "playlist_url": "https://soundcloud.com/dmitry-kotikov/sets/antonio-vivaldi",
+        "text": ""
+      }
+    },
+    {
+      "start_date": {
+        "year": "1685"
+      },
+      "end_date": {
+        "year": "1750"
+      },
+      "text": {
+        "headline": "Johann Sebastian Bach",
+        "markdown_id": "bach",
+        "essentials_label": "Bach essentials",
+        "image_url": "/timeline/images/bach.png",
+        "playlist_url": "https://soundcloud.com/dmitry-kotikov/sets/johann-sebastian-bach",
+        "text": ""
+      }
+    },
+    {
+      "start_date": {
+        "year": "1685"
+      },
+      "end_date": {
+        "year": "1757"
+      },
+      "text": {
+        "headline": "Domenico Scarlatti",
+        "text": "",
+        "markdown_id": "domenico-scarlatti"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1685"
+      },
+      "end_date": {
+        "year": "1759"
+      },
+      "text": {
+        "headline": "George Frideric Handel",
+        "text": "",
+        "markdown_id": "handel"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1732"
+      },
+      "end_date": {
+        "year": "1809"
+      },
+      "text": {
+        "headline": "Joseph Haydn",
+        "text": "",
+        "markdown_id": "haydn"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1756"
+      },
+      "end_date": {
+        "year": "1791"
+      },
+      "text": {
+        "headline": "Wolfgang Amadeus Mozart",
+        "text": "",
+        "markdown_id": "mozart"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1770"
+      },
+      "end_date": {
+        "year": "1827"
+      },
+      "text": {
+        "headline": "Ludwig van Beethoven",
+        "text": "",
+        "markdown_id": "beethoven"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1782"
+      },
+      "end_date": {
+        "year": "1840"
+      },
+      "text": {
+        "headline": "Niccolò Paganini",
+        "text": "",
+        "markdown_id": "paganini"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1791"
+      },
+      "end_date": {
+        "year": "1857"
+      },
+      "text": {
+        "headline": "Carl Czerny",
+        "text": "",
+        "markdown_id": "carl-czerny"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1797"
+      },
+      "end_date": {
+        "year": "1828"
+      },
+      "text": {
+        "headline": "Franz Schubert",
+        "text": "",
+        "markdown_id": "schubert"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1804"
+      },
+      "end_date": {
+        "year": "1857"
+      },
+      "text": {
+        "headline": "Mikhail Glinka",
+        "text": "",
+        "markdown_id": "glinka"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1804"
+      },
+      "end_date": {
+        "year": "1849"
+      },
+      "text": {
+        "headline": "Johann Strauss I",
+        "text": "",
+        "markdown_id": "johann-strauss-i"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1809"
+      },
+      "end_date": {
+        "year": "1847"
+      },
+      "text": {
+        "headline": "Felix Mendelssohn",
+        "text": "",
+        "markdown_id": "mendelssohn"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1810"
+      },
+      "end_date": {
+        "year": "1849"
+      },
+      "text": {
+        "headline": "Frédéric Chopin",
+        "text": "",
+        "markdown_id": "chopin"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1810"
+      },
+      "end_date": {
+        "year": "1856"
+      },
+      "text": {
+        "headline": "Robert Schumann",
+        "text": "",
+        "markdown_id": "schumann"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1811"
+      },
+      "end_date": {
+        "year": "1886"
+      },
+      "text": {
+        "headline": "Franz Liszt",
+        "text": "",
+        "markdown_id": "liszt"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1813"
+      },
+      "end_date": {
+        "year": "1883"
+      },
+      "text": {
+        "headline": "Richard Wagner",
+        "text": "",
+        "markdown_id": "wagner"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1813"
+      },
+      "end_date": {
+        "year": "1901"
+      },
+      "text": {
+        "headline": "Giuseppe Verdi",
+        "text": "",
+        "markdown_id": "verdi"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1825"
+      },
+      "end_date": {
+        "year": "1899"
+      },
+      "text": {
+        "headline": "Johann Strauss II",
+        "text": "",
+        "markdown_id": "johann-strauss-ii"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1833"
+      },
+      "end_date": {
+        "year": "1897"
+      },
+      "text": {
+        "headline": "Johannes Brahms",
+        "text": "",
+        "markdown_id": "brahms"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1833"
+      },
+      "end_date": {
+        "year": "1887"
+      },
+      "text": {
+        "headline": "Alexander Borodin",
+        "text": "",
+        "markdown_id": "borodin"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1835"
+      },
+      "end_date": {
+        "year": "1921"
+      },
+      "text": {
+        "headline": "Camille Saint-Saëns",
+        "text": "",
+        "markdown_id": "saint-saens"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1838"
+      },
+      "end_date": {
+        "year": "1875"
+      },
+      "text": {
+        "headline": "Georges Bizet",
+        "text": "",
+        "markdown_id": "bizet"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1839"
+      },
+      "end_date": {
+        "year": "1881"
+      },
+      "text": {
+        "headline": "Modest Mussorgsky",
+        "text": "",
+        "markdown_id": "mussorgsky"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1840"
+      },
+      "end_date": {
+        "year": "1893"
+      },
+      "text": {
+        "headline": "Pyotr Ilyich Tchaikovsky",
+        "text": "",
+        "markdown_id": "tchaikovsky"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1841"
+      },
+      "end_date": {
+        "year": "1904"
+      },
+      "text": {
+        "headline": "Antonín Dvořák",
+        "text": "",
+        "markdown_id": "dvorak"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1843"
+      },
+      "end_date": {
+        "year": "1907"
+      },
+      "text": {
+        "headline": "Edvard Grieg",
+        "text": "",
+        "markdown_id": "grieg"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1844"
+      },
+      "end_date": {
+        "year": "1908"
+      },
+      "text": {
+        "headline": "Nikolai Rimsky-Korsakov",
+        "text": "",
+        "markdown_id": "rimsky-korsakov"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1860"
+      },
+      "end_date": {
+        "year": "1911"
+      },
+      "text": {
+        "headline": "Gustav Mahler",
+        "text": "",
+        "markdown_id": "mahler"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1862"
+      },
+      "end_date": {
+        "year": "1918"
+      },
+      "text": {
+        "headline": "Claude Debussy",
+        "text": "",
+        "markdown_id": "debussy"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1866"
+      },
+      "end_date": {
+        "year": "1925"
+      },
+      "text": {
+        "headline": "Erik Satie",
+        "text": "",
+        "markdown_id": "satie"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1872"
+      },
+      "end_date": {
+        "year": "1915"
+      },
+      "text": {
+        "headline": "Alexander Scriabin",
+        "text": "",
+        "markdown_id": "scriabin"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1873"
+      },
+      "end_date": {
+        "year": "1943"
+      },
+      "text": {
+        "headline": "Sergei Rachmaninoff",
+        "text": "",
+        "markdown_id": "rachmaninoff"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1875"
+      },
+      "end_date": {
+        "year": "1937"
+      },
+      "text": {
+        "headline": "Maurice Ravel",
+        "text": "",
+        "markdown_id": "ravel"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1882"
+      },
+      "end_date": {
+        "year": "1971"
+      },
+      "text": {
+        "headline": "Igor Stravinsky",
+        "text": "",
+        "markdown_id": "stravinsky"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1891"
+      },
+      "end_date": {
+        "year": "1953"
+      },
+      "text": {
+        "headline": "Sergei Prokofiev",
+        "text": "",
+        "markdown_id": "prokofiev"
+      }
+    }
+  ],
+  "eras": [
+    {
+      "start_date": {
+        "year": "1600"
+      },
+      "end_date": {
+        "year": "1750"
+      },
+      "text": {
+        "headline": "Baroque"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1750"
+      },
+      "end_date": {
+        "year": "1820"
+      },
+      "text": {
+        "headline": "Classical"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1820"
+      },
+      "end_date": {
+        "year": "1900"
+      },
+      "text": {
+        "headline": "Romantic"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1900"
+      },
+      "end_date": {
+        "year": "2000"
+      },
+      "text": {
+        "headline": "20th Century"
+      }
+    }
+  ]
+}

@@ -801,6 +801,86 @@ export function initKnightlabTimeline(containerId) {
     setTimeout(() => applyTimenavHeight(idForHeight), 0);
   }
 
+  function attachReadMoreToggles() {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+
+    const isMobileWidth = () => {
+      const viewportWidth =
+        (window.visualViewport && window.visualViewport.width) ||
+        window.innerWidth;
+      return viewportWidth <= MOBILE_WIDTH_BREAKPOINT;
+    };
+
+    const updateFactsVisibility = () => {
+      const mobile = isMobileWidth();
+      const parents = container.querySelectorAll("#comp-content");
+      parents.forEach((parent) => {
+        const toggle = parent.querySelector(".facts-toggle");
+        const extras = parent.querySelectorAll(".fact--extra");
+        if (!toggle || !extras.length) return;
+
+        if (!mobile) {
+          extras.forEach((el) => {
+            el.style.display = "list-item";
+          });
+          toggle.style.display = "none";
+          toggle.dataset.state = "expanded";
+          toggle.textContent = "Read more facts";
+          return;
+        }
+
+        const state = toggle.dataset.state || "collapsed";
+        const showAll = state === "expanded";
+
+        extras.forEach((el) => {
+          el.style.display = showAll ? "list-item" : "none";
+        });
+        toggle.style.display = "inline-block";
+        toggle.textContent = showAll ? "Show less" : "Read more facts";
+      });
+
+      applyHeightForCurrentSlide();
+      setTimeout(applyHeightForCurrentSlide, 100);
+    };
+
+    container.addEventListener("click", (event) => {
+      const link = event.target.closest(".facts-toggle");
+      if (!link) return;
+
+       // On desktop we always show everything; just refresh layout.
+      if (!isMobileWidth()) {
+        updateFactsVisibility();
+        return;
+      }
+
+      event.preventDefault();
+      const state = link.dataset.state || "collapsed";
+      const parent = link.closest("#comp-content") || link.parentElement;
+      if (!parent) return;
+
+      const extraFacts = parent.querySelectorAll(".fact--extra");
+      const isCollapsed = state === "collapsed";
+
+      extraFacts.forEach((el) => {
+        el.style.display = isCollapsed ? "list-item" : "none";
+      });
+
+      link.dataset.state = isCollapsed ? "expanded" : "collapsed";
+      link.textContent = isCollapsed ? "Show less" : "Read more facts";
+
+      updateFactsVisibility();
+    });
+
+    const resizeHandler = () => updateFactsVisibility();
+    window.addEventListener("resize", resizeHandler);
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener("resize", resizeHandler);
+    }
+
+    updateFactsVisibility();
+  }
+
   // Observe slide text height changes (e.g., when SoundCloud list finishes rendering)
   let slideResizeObserver = null;
   let resizeRaf = null;
@@ -956,6 +1036,7 @@ export function initKnightlabTimeline(containerId) {
         window.timeline.current_id || window.location.hash || "";
       applyTimenavHeight(initialId);
       recalcBaseTimenavHeight();
+      attachReadMoreToggles();
 
       // Initialize SoundCloud players, then re-apply height once they are rendered
       initSoundCloudPlayers(() => {

@@ -18,7 +18,11 @@
       },
       "text": {
         "headline": "Antonio Vivaldi",
-        "text": "<div id=\"comp-content\"><a class=\"tl-expandable-img-link\"><img src=\"/timeline/images/vivaldi.png\" alt=\"Antonio Vivaldi\" class=\"tl-expandable-img\" style=\"float:right;height:36vw;max-height:200px;margin:0 0 8px 12px;\" /></a><div style=\"font-weight:bold;margin-bottom:4px; margin-left:15px;\">Vivaldi essentials:</div><ul><li>Who he was: Venetian Baroque composer and virtuoso violinist, one of the most influential composers of his time.</li><li>Nickname: Called \"Il Prete Rosso\" - The Red Priest - because he was an ordained Catholic priest with bright red hair.</li><li>The Four Seasons: His hit piece is The Four Seasons, four violin concertos that paint thunderstorms, birds, icy winds, drunken dancing, etc. - one of the first and most famous examples of \"program music\" (music that tells a story).</li><li>Music for an orphanage: He spent decades working at the Ospedale della Pietà in Venice, writing concertos and sacred music for an all-female orchestra of orphaned or abandoned girls, which became a tourist attraction in Venice.</li><li>Concerto pioneer: He wrote around 500 concertos and basically set the \"standard model\" for the Baroque solo concerto (fast–slow–fast), influencing Bach and many others.</li><li>Rise, fall, comeback: Famous in his lifetime, he died poor in Vienna and was largely forgotten until a big Vivaldi revival in the 20th century, when lost manuscripts were rediscovered and his music became concert-hall mainstream again.</li></ul><div style=\"clear:both;\"></div><div style=\"margin-top:5px\"><div></div><div style=\"margin:5px 15px 5px 15px\"><div style=\"font-weight:bold;margin-bottom:4px;\">Key works to know:</div><div class=\"sc-player\" data-soundcloud-playlist=\"https://soundcloud.com/dmitry-kotikov/sets/antonio-vivaldi\"><div class=\"sc-player__status\">Loading tracks...</div></div></div></div></div>"
+        "markdown_id": "vivaldi",
+        "essentials_label": "Vivaldi essentials",
+        "image_url": "/timeline/images/vivaldi.png",
+        "playlist_url": "https://soundcloud.com/dmitry-kotikov/sets/antonio-vivaldi",
+        "text": "<div id=\"comp-content\"><a class=\"tl-expandable-img-link\"><img src=\"/timeline/images/vivaldi.png\" alt=\"Antonio Vivaldi\" class=\"tl-expandable-img\" style=\"float:right;height:36vw;max-height:200px;margin:0 0 8px 12px;\" /></a><div style=\"font-weight:bold;margin-bottom:4px; margin-left:15px;\">Vivaldi essentials:</div><ul><li>Who he was: Venetian Baroque composer and virtuoso violinist, one of the most influential composers of his time.</li><li>Nickname: Called &quot;Il Prete Rosso&quot; - The Red Priest - because he was an ordained Catholic priest with bright red hair.</li><li>The Four Seasons: His hit piece is The Four Seasons, four violin concertos that paint thunderstorms, birds, icy winds, drunken dancing, etc. - one of the first and most famous examples of &quot;program music&quot; (music that tells a story).</li><li class=\"fact fact--extra\" style=\"display:none;\">Music for an orphanage: He spent decades working at the Ospedale della Pieta in Venice, writing concertos and sacred music for an all-female orchestra of orphaned or abandoned girls, which became a tourist attraction in Venice.</li><li class=\"fact fact--extra\" style=\"display:none;\">Concerto pioneer: He wrote around 500 concertos and basically set the &quot;standard model&quot; for the Baroque solo concerto (fast-slow-fast), influencing Bach and many others.</li><li class=\"fact fact--extra\" style=\"display:none;\">Rise, fall, comeback: Famous in his lifetime, he died poor in Vienna and was largely forgotten until a big Vivaldi revival in the 20th century, when lost manuscripts were rediscovered and his music became concert-hall mainstream again.</li></ul><a href=\"#\" class=\"facts-toggle\" data-state=\"collapsed\" style=\"display:inline-block;margin:4px 0 0 15px;font-size:14px;text-decoration:underline;color:#000;cursor:pointer;\">Read more facts</a><div style=\"clear:both;\"></div><div style=\"margin-top:5px\"><div></div><div style=\"margin:10px 15px 5px 15px\"><div style=\"font-weight:bold;margin-bottom:4px;\">Key works to know:</div><div class=\"sc-player\" data-soundcloud-playlist=\"https://soundcloud.com/dmitry-kotikov/sets/antonio-vivaldi\"><div class=\"sc-player__status\">Loading tracks...</div></div></div></div></div>"
       }
     },
     {
@@ -30,7 +34,11 @@
       },
       "text": {
         "headline": "Johann Sebastian Bach",
-        "text": "<div id=\"comp-content\"><a class=\"tl-expandable-img-link\"><img src=\"/timeline/images/bach.png\" alt=\"Johann Sebastian Bach\" class=\"tl-expandable-img\" style=\"float:right;height:36vw;max-height:200px;margin:0 0 8px 12px;\" /></a><div style=\"font-weight:bold;margin-bottom:4px; margin-left:15px;\">Bach essentials:</div><ul><li>Who he was: German Baroque composer and church musician, now seen as one of the greatest composers of all time.</li><li>What makes him special: Master of counterpoint (many melodies at once), harmony and structure; he took German, Italian and French styles and fused them into something new.</li><li>Job in Leipzig: For 27 years he was Thomaskantor in Leipzig: writing a new cantata almost every week for church, teaching, and running the choir and school.</li><li>Tuning nerd fact: The Well-Tempered Clavier was written to show that, with the right tuning (\"well temperament\"), you can play in every key on the same keyboard - something revolutionary at the time.</li><li>Legacy: After his death he was almost forgotten; Mendelssohn's 1829 performance of the St Matthew Passion kick-started the \"Bach revival\", and since then his music is standard for study, performance and even modern harmony teaching. </li><li>Fun modern fact: New Bach works are still being discovered: in 2025, two early organ chaconnes were authenticated and performed for the first time in 300 years in Leipzig, where he is buried.</li></ul><div style=\"clear:both;\"></div><div style=\"margin-top:5px\"><div></div><div style=\"margin:5px 15px 5px 15px\"><div style=\"font-weight:bold;margin-bottom:4px;\">Key works to know:</div><div class=\"sc-player\" data-soundcloud-playlist=\"https://soundcloud.com/dmitry-kotikov/sets/johann-sebastian-bach\"><div class=\"sc-player__status\">Loading tracks...</div></div></div></div></div>"
+        "markdown_id": "bach",
+        "essentials_label": "Bach essentials",
+        "image_url": "/timeline/images/bach.png",
+        "playlist_url": "https://soundcloud.com/dmitry-kotikov/sets/johann-sebastian-bach",
+        "text": "<div id=\"comp-content\"><a class=\"tl-expandable-img-link\"><img src=\"/timeline/images/bach.png\" alt=\"Johann Sebastian Bach\" class=\"tl-expandable-img\" style=\"float:right;height:36vw;max-height:200px;margin:0 0 8px 12px;\" /></a><div style=\"font-weight:bold;margin-bottom:4px; margin-left:15px;\">Bach essentials:</div><ul><li>Who he was: German Baroque composer and church musician, now seen as one of the greatest composers of all time.</li><li>What makes him special: Master of counterpoint (many melodies at once), harmony and structure; he took German, Italian and French styles and fused them into something new.</li><li>Job in Leipzig: For 27 years he was Thomaskantor in Leipzig: writing a new cantata almost every week for church, teaching, and running the choir and school.</li><li class=\"fact fact--extra\" style=\"display:none;\">Tuning nerd fact: The Well-Tempered Clavier was written to show that, with the right tuning (&quot;well temperament&quot;), you can play in every key on the same keyboard - something revolutionary at the time.</li><li class=\"fact fact--extra\" style=\"display:none;\">Legacy: After his death he was almost forgotten; Mendelssohn&#39;s 1829 performance of the St Matthew Passion kick-started the &quot;Bach revival&quot;, and since then his music is standard for study, performance and even modern harmony teaching.</li><li class=\"fact fact--extra\" style=\"display:none;\">Fun modern fact: New Bach works are still being discovered: in 2025, two early organ chaconnes were authenticated and performed for the first time in 300 years in Leipzig, where he is buried.</li></ul><a href=\"#\" class=\"facts-toggle\" data-state=\"collapsed\" style=\"display:inline-block;margin:4px 0 0 15px;font-size:14px;text-decoration:underline;color:#000;cursor:pointer;\">Read more facts</a><div style=\"clear:both;\"></div><div style=\"margin-top:5px\"><div></div><div style=\"margin:10px 15px 5px 15px\"><div style=\"font-weight:bold;margin-bottom:4px;\">Key works to know:</div><div class=\"sc-player\" data-soundcloud-playlist=\"https://soundcloud.com/dmitry-kotikov/sets/johann-sebastian-bach\"><div class=\"sc-player__status\">Loading tracks...</div></div></div></div></div>"
       }
     },
     {
@@ -42,7 +50,8 @@
       },
       "text": {
         "headline": "Domenico Scarlatti",
-        "text": "To be added later"
+        "text": "<div id=\"comp-content\"><div style=\"font-weight:bold;margin-bottom:4px; margin-left:15px;\">Domenico Scarlatti essentials:</div><ul><li>Who he was: Italian Baroque composer and keyboard virtuoso who spent much of his career at the courts of Portugal and Spain.</li><li>555 sonatas: He wrote around 555 one-movement keyboard sonatas that pushed the boundaries of harmony, hand-crossing and technique for the harpsichord and early piano.</li><li>Royal teacher: At the Spanish court he served as music master to Maria Barbara, first a Portuguese princess and later Queen of Spain, tailoring many sonatas for her playing.</li><li class=\"fact fact--extra\" style=\"display:none;\">Iberian flavor: His music often echoes Spanish guitar strumming, castanet-like rhythms and folk dances, giving his sonatas a distinctive Iberian color.</li><li class=\"fact fact--extra\" style=\"display:none;\">Lasting influence: Today his sonatas are core repertoire for pianists and harpsichordists, used both as brilliant concert pieces and as technical studies.</li></ul><a href=\"#\" class=\"facts-toggle\" data-state=\"collapsed\" style=\"display:inline-block;margin:4px 0 0 15px;font-size:14px;text-decoration:underline;color:#000;cursor:pointer;\">Read more facts</a><div style=\"clear:both;\"></div></div>",
+        "markdown_id": "domenico-scarlatti"
       }
     },
     {
@@ -54,7 +63,8 @@
       },
       "text": {
         "headline": "George Frideric Handel",
-        "text": "To be added later"
+        "text": "<div id=\"comp-content\"><div style=\"font-weight:bold;margin-bottom:4px; margin-left:15px;\">George Frideric Handel essentials:</div><ul><li>Who he was: German-born Baroque composer who became a British citizen and made his career in London writing operas, oratorios and instrumental music.</li><li>Messiah and Hallelujah: His oratorio Messiah, especially the &quot;Hallelujah&quot; chorus, became one of the most famous pieces in Western music and a staple of choral life.</li><li>Stage to oratorio: After financial troubles with Italian opera companies, he pivoted to English-language oratorios that could be performed without full staging and became hugely popular.</li><li class=\"fact fact--extra\" style=\"display:none;\">Royal occasions: He wrote festive works like Water Music and Music for the Royal Fireworks for open-air royal celebrations on the Thames and in London.</li><li class=\"fact fact--extra\" style=\"display:none;\">End of life: Even after he went blind, he continued to direct performances from the keyboard, remaining a public musical figure until shortly before his death.</li></ul><a href=\"#\" class=\"facts-toggle\" data-state=\"collapsed\" style=\"display:inline-block;margin:4px 0 0 15px;font-size:14px;text-decoration:underline;color:#000;cursor:pointer;\">Read more facts</a><div style=\"clear:both;\"></div></div>",
+        "markdown_id": "handel"
       }
     },
     {
@@ -66,7 +76,8 @@
       },
       "text": {
         "headline": "Joseph Haydn",
-        "text": "To be added later"
+        "text": "<div id=\"comp-content\"><div style=\"font-weight:bold;margin-bottom:4px; margin-left:15px;\">Joseph Haydn essentials:</div><ul><li>Who he was: Austrian Classical composer often called the &quot;father of the symphony&quot; and &quot;father of the string quartet&quot;.</li><li>Esterházy years: For decades he worked for the Esterházy princes on a remote estate, writing symphonies, quartets and operas for their private orchestra.</li><li>Inventive symphonies: He wrote over 100 symphonies, including the &quot;Surprise&quot; and the late &quot;London&quot; symphonies, full of musical jokes, experiments and sudden turns.</li><li class=\"fact fact--extra\" style=\"display:none;\">Teacher and mentor: He taught the young Beethoven and was a major influence on Mozart; all three knew and admired each other.</li><li class=\"fact fact--extra\" style=\"display:none;\">Character: His music is known for wit, clarity and warmth, often starting from simple ideas and spinning them into sophisticated structures.</li></ul><a href=\"#\" class=\"facts-toggle\" data-state=\"collapsed\" style=\"display:inline-block;margin:4px 0 0 15px;font-size:14px;text-decoration:underline;color:#000;cursor:pointer;\">Read more facts</a><div style=\"clear:both;\"></div></div>",
+        "markdown_id": "haydn"
       }
     },
     {
@@ -78,7 +89,8 @@
       },
       "text": {
         "headline": "Wolfgang Amadeus Mozart",
-        "text": "To be added later"
+        "text": "<div id=\"comp-content\"><div style=\"font-weight:bold;margin-bottom:4px; margin-left:15px;\">Wolfgang Amadeus Mozart essentials:</div><ul><li>Who he was: Salzburg-born Classical composer and child prodigy who toured Europe, composing symphonies and operas from an early age.</li><li>Prodigy years: As a boy he dazzled courts across Europe on keyboard and violin, improvising, composing and performing from memory.</li><li>Operatic drama: His operas like The Magic Flute, Don Giovanni and The Marriage of Figaro combine unforgettable tunes with sharp human psychology and social satire.</li><li class=\"fact fact--extra\" style=\"display:none;\">Versatile genius: He wrote in almost every genre of his time&#39;s music – piano concertos, symphonies, chamber works, sacred music and the unfinished Requiem.</li><li class=\"fact fact--extra\" style=\"display:none;\">Short life, huge legacy: He died at 35 in Vienna, modestly buried, but his music became a universal symbol of melodic beauty and perfect Classical style.</li></ul><a href=\"#\" class=\"facts-toggle\" data-state=\"collapsed\" style=\"display:inline-block;margin:4px 0 0 15px;font-size:14px;text-decoration:underline;color:#000;cursor:pointer;\">Read more facts</a><div style=\"clear:both;\"></div></div>",
+        "markdown_id": "mozart"
       }
     },
     {
@@ -90,7 +102,8 @@
       },
       "text": {
         "headline": "Ludwig van Beethoven",
-        "text": "To be added later"
+        "text": "<div id=\"comp-content\"><div style=\"font-weight:bold;margin-bottom:4px; margin-left:15px;\">Ludwig van Beethoven essentials:</div><ul><li>Who he was: German composer and pianist who bridged the Classical and Romantic eras and radically expanded what symphonies and sonatas could be.</li><li>Deaf composer: He began to lose his hearing in his late twenties, yet wrote many of his greatest works when almost or completely deaf.</li><li>Landmark works: His Third (&quot;Eroica&quot;), Fifth and Ninth symphonies, the late string quartets and 32 piano sonatas reshaped Western music.</li><li class=\"fact fact--extra\" style=\"display:none;\">Heroic image: His music often sounds like a struggle from darkness to light, helping create the modern image of the tormented, independent artist.</li><li class=\"fact fact--extra\" style=\"display:none;\">Influence: Later composers felt they had to respond to Beethoven in some way – either continue his path or react against it.</li></ul><a href=\"#\" class=\"facts-toggle\" data-state=\"collapsed\" style=\"display:inline-block;margin:4px 0 0 15px;font-size:14px;text-decoration:underline;color:#000;cursor:pointer;\">Read more facts</a><div style=\"clear:both;\"></div></div>",
+        "markdown_id": "beethoven"
       }
     },
     {
@@ -102,7 +115,8 @@
       },
       "text": {
         "headline": "Niccolò Paganini",
-        "text": "To be added later"
+        "text": "<div id=\"comp-content\"><div style=\"font-weight:bold;margin-bottom:4px; margin-left:15px;\">Niccolò Paganini essentials:</div><ul><li>Who he was: Genoese violin virtuoso and composer of the early 19th century, famed for his almost superhuman technique.</li><li>24 Caprices: His 24 Caprices for Solo Violin became legendary as some of the most demanding pieces ever written for the instrument, a rite of passage for virtuosos.</li><li>Violin tricks: He popularized advanced techniques like left-hand pizzicato, harmonics and extreme leaps, stretching what the violin seemed capable of.</li><li class=\"fact fact--extra\" style=\"display:none;\">Devil legend: His gaunt appearance, showmanship and private life fed rumors that he had sold his soul to the devil in exchange for his talent.</li><li class=\"fact fact--extra\" style=\"display:none;\">Inspiration for others: Composers from Liszt to Rachmaninoff later wrote dazzling variations on the theme of his last Caprice.</li></ul><a href=\"#\" class=\"facts-toggle\" data-state=\"collapsed\" style=\"display:inline-block;margin:4px 0 0 15px;font-size:14px;text-decoration:underline;color:#000;cursor:pointer;\">Read more facts</a><div style=\"clear:both;\"></div></div>",
+        "markdown_id": "paganini"
       }
     },
     {
@@ -114,7 +128,8 @@
       },
       "text": {
         "headline": "Carl Czerny",
-        "text": "To be added later"
+        "text": "<div id=\"comp-content\"><div style=\"font-weight:bold;margin-bottom:4px; margin-left:15px;\">Carl Czerny essentials:</div><ul><li>Facts will be added soon.</li></ul><div style=\"clear:both;\"></div></div>",
+        "markdown_id": "carl-czerny"
       }
     },
     {
@@ -126,7 +141,8 @@
       },
       "text": {
         "headline": "Franz Schubert",
-        "text": "To be added later"
+        "text": "<div id=\"comp-content\"><div style=\"font-weight:bold;margin-bottom:4px; margin-left:15px;\">Franz Schubert essentials:</div><ul><li>Who he was: Viennese early Romantic composer who lived only 31 years but left a huge body of songs, chamber works and symphonies.</li><li>Master of song: He wrote over 600 Lieder, including &quot;Erlkönig&quot;, &quot;Ave Maria&quot; and the song cycles Winterreise and Die schöne Müllerin.</li><li>Beyond songs: His &quot;Unfinished&quot; Symphony, the &quot;Great&quot; C major symphony and works like the &quot;Trout&quot; Quintet are pillars of orchestral and chamber music.</li><li class=\"fact fact--extra\" style=\"display:none;\">Schubertiades: During his life he was known mainly within a circle of friends who gathered for informal evenings of his music.</li><li class=\"fact fact--extra\" style=\"display:none;\">Posthumous fame: Much of his music was only published and truly appreciated after his death.</li></ul><a href=\"#\" class=\"facts-toggle\" data-state=\"collapsed\" style=\"display:inline-block;margin:4px 0 0 15px;font-size:14px;text-decoration:underline;color:#000;cursor:pointer;\">Read more facts</a><div style=\"clear:both;\"></div></div>",
+        "markdown_id": "schubert"
       }
     },
     {
@@ -138,7 +154,8 @@
       },
       "text": {
         "headline": "Mikhail Glinka",
-        "text": "To be added later"
+        "text": "<div id=\"comp-content\"><div style=\"font-weight:bold;margin-bottom:4px; margin-left:15px;\">Mikhail Glinka essentials:</div><ul><li>Who he was: Russian composer often called the father of Russian classical music and the founder of the Russian national school.</li><li>Operatic pioneer: His operas A Life for the Tsar and Ruslan and Lyudmila were among the first to use Russian history and folklore in a distinctively Russian musical language.</li><li>Folk roots: He drew on Russian folk songs and dances, blending them with Western techniques to create something new for his country&#39;s audiences.</li><li class=\"fact fact--extra\" style=\"display:none;\">Influence: Later Russian composers, especially the group known as &quot;The Five&quot;, took his music as a starting point for their own national style.</li></ul><a href=\"#\" class=\"facts-toggle\" data-state=\"collapsed\" style=\"display:inline-block;margin:4px 0 0 15px;font-size:14px;text-decoration:underline;color:#000;cursor:pointer;\">Read more facts</a><div style=\"clear:both;\"></div></div>",
+        "markdown_id": "glinka"
       }
     },
     {
@@ -150,7 +167,8 @@
       },
       "text": {
         "headline": "Johann Strauss I",
-        "text": "To be added later"
+        "text": "<div id=\"comp-content\"><div style=\"font-weight:bold;margin-bottom:4px; margin-left:15px;\">Johann Strauss I essentials:</div><ul><li>Facts will be added soon.</li></ul><div style=\"clear:both;\"></div></div>",
+        "markdown_id": "johann-strauss-i"
       }
     },
     {
@@ -162,7 +180,8 @@
       },
       "text": {
         "headline": "Felix Mendelssohn",
-        "text": "To be added later"
+        "text": "<div id=\"comp-content\"><div style=\"font-weight:bold;margin-bottom:4px; margin-left:15px;\">Felix Mendelssohn essentials:</div><ul><li>Who he was: German early Romantic composer, pianist, organist and one of the leading conductors of his generation.</li><li>Prodigy and classicist: As a teenager he wrote works like the Octet and the overture to A Midsummer Night&#39;s Dream, admired for their clarity and elegance.</li><li>Bach revival: In 1829 he conducted a landmark performance of Bach&#39;s St Matthew Passion, helping to bring Bach back into the concert hall.</li><li class=\"fact fact--extra\" style=\"display:none;\">Builder of institutions: He founded the Leipzig Conservatory and raised the standard of orchestral playing through his work with the Leipzig Gewandhaus Orchestra.</li><li class=\"fact fact--extra\" style=\"display:none;\">Famous pieces: Today listeners know him for the Violin Concerto, the Italian and Scottish symphonies and the Wedding March from A Midsummer Night’s Dream.</li></ul><a href=\"#\" class=\"facts-toggle\" data-state=\"collapsed\" style=\"display:inline-block;margin:4px 0 0 15px;font-size:14px;text-decoration:underline;color:#000;cursor:pointer;\">Read more facts</a><div style=\"clear:both;\"></div></div>",
+        "markdown_id": "mendelssohn"
       }
     },
     {
@@ -174,7 +193,8 @@
       },
       "text": {
         "headline": "Frédéric Chopin",
-        "text": "To be added later"
+        "text": "<div id=\"comp-content\"><div style=\"font-weight:bold;margin-bottom:4px; margin-left:15px;\">Frédéric Chopin essentials:</div><ul><li>Who he was: Polish composer and piano virtuoso who spent much of his adult life in Paris and wrote almost exclusively for the piano.</li><li>Poet of the piano: His nocturnes, ballades, waltzes, mazurkas and polonaises turned keyboard miniatures into highly expressive, poetic pieces.</li><li>Polish spirit: He transformed Polish dances and rhythms into refined concert music, making his works symbols of Polish identity.</li><li class=\"fact fact--extra\" style=\"display:none;\">Personal style: Singing right-hand melodies, rich harmonies and subtle rubato became hallmarks of his intimate, inward-looking style.</li><li class=\"fact fact--extra\" style=\"display:none;\">Life and legend: Frail health, exile from Poland and his long relationship with the writer George Sand all color how people hear his music.</li></ul><a href=\"#\" class=\"facts-toggle\" data-state=\"collapsed\" style=\"display:inline-block;margin:4px 0 0 15px;font-size:14px;text-decoration:underline;color:#000;cursor:pointer;\">Read more facts</a><div style=\"clear:both;\"></div></div>",
+        "markdown_id": "chopin"
       }
     },
     {
@@ -186,7 +206,8 @@
       },
       "text": {
         "headline": "Robert Schumann",
-        "text": "To be added later"
+        "text": "<div id=\"comp-content\"><div style=\"font-weight:bold;margin-bottom:4px; margin-left:15px;\">Robert Schumann essentials:</div><ul><li>Who he was: German Romantic composer, pianist and influential music critic.</li><li>Piano and song cycles: He wrote characterful piano works like Carnaval and Kinderszenen, as well as major song cycles such as Dichterliebe.</li><li>Symphonies and chamber music: His four symphonies and many chamber pieces explore more inward, poetic sides of Romanticism.</li><li class=\"fact fact--extra\" style=\"display:none;\">Critic and advocate: As editor of the journal Neue Zeitschrift für Musik he championed young talents like Chopin and Brahms.</li><li class=\"fact fact--extra\" style=\"display:none;\">Struggles: He battled mental illness and spent his final years in an asylum, where his wife Clara and Brahms remained devoted supporters.</li></ul><a href=\"#\" class=\"facts-toggle\" data-state=\"collapsed\" style=\"display:inline-block;margin:4px 0 0 15px;font-size:14px;text-decoration:underline;color:#000;cursor:pointer;\">Read more facts</a><div style=\"clear:both;\"></div></div>",
+        "markdown_id": "schumann"
       }
     },
     {
@@ -198,7 +219,8 @@
       },
       "text": {
         "headline": "Franz Liszt",
-        "text": "To be added later"
+        "text": "<div id=\"comp-content\"><div style=\"font-weight:bold;margin-bottom:4px; margin-left:15px;\">Franz Liszt essentials:</div><ul><li>Who he was: Hungarian pianist-composer and 19th-century superstar, famed for his explosive virtuosity and showmanship.</li><li>Piano wizard: He effectively invented the modern solo piano recital and pushed piano technique to new extremes.</li><li>New forms: He developed the symphonic poem and used thematic transformation, influencing Wagner and many later composers.</li><li class=\"fact fact--extra\" style=\"display:none;\">Late style: His late works are harmonically daring and often bleak, foreshadowing 20th-century modernism.</li><li class=\"fact fact--extra\" style=\"display:none;\">Generous mentor: He taught and promoted many younger musicians, often giving money and support to colleagues in need.</li></ul><a href=\"#\" class=\"facts-toggle\" data-state=\"collapsed\" style=\"display:inline-block;margin:4px 0 0 15px;font-size:14px;text-decoration:underline;color:#000;cursor:pointer;\">Read more facts</a><div style=\"clear:both;\"></div></div>",
+        "markdown_id": "liszt"
       }
     },
     {
@@ -210,7 +232,8 @@
       },
       "text": {
         "headline": "Richard Wagner",
-        "text": "To be added later"
+        "text": "<div id=\"comp-content\"><div style=\"font-weight:bold;margin-bottom:4px; margin-left:15px;\">Richard Wagner essentials:</div><ul><li>Who he was: German composer and dramatist best known for his large-scale operas, which he called &quot;music dramas&quot;.</li><li>Leitmotifs: He used recurring musical ideas to represent characters, objects and ideas, especially in his four-opera Ring cycle.</li><li>Harmonic revolution: Works like Tristan und Isolde stretched traditional harmony and influenced the move toward modern music.</li><li class=\"fact fact--extra\" style=\"display:none;\">Bayreuth: He designed and built his own festival theater in Bayreuth, dedicated to staging his works on his own terms.</li><li class=\"fact fact--extra\" style=\"display:none;\">Controversy: His writings and some of his views, especially his antisemitism, remain deeply troubling and widely discussed.</li></ul><a href=\"#\" class=\"facts-toggle\" data-state=\"collapsed\" style=\"display:inline-block;margin:4px 0 0 15px;font-size:14px;text-decoration:underline;color:#000;cursor:pointer;\">Read more facts</a><div style=\"clear:both;\"></div></div>",
+        "markdown_id": "wagner"
       }
     },
     {
@@ -222,7 +245,8 @@
       },
       "text": {
         "headline": "Giuseppe Verdi",
-        "text": "To be added later"
+        "text": "<div id=\"comp-content\"><div style=\"font-weight:bold;margin-bottom:4px; margin-left:15px;\">Giuseppe Verdi essentials:</div><ul><li>Who he was: Leading Italian opera composer of the 19th century, central to the tradition of Italian grand opera.</li><li>Hit operas: Rigoletto, Il trovatore, La traviata, Aida, Otello and Falstaff are among his many enduring stage works.</li><li>Voice and drama: He focused on clear vocal lines and tightly drawn characters, making his operas powerful vehicles for emotion and theater.</li><li class=\"fact fact--extra\" style=\"display:none;\">National symbol: Choruses like &quot;Va, pensiero&quot; from Nabucco became associated with the Italian unification movement.</li><li class=\"fact fact--extra\" style=\"display:none;\">Late flowering: His final two Shakespeare-based operas, Otello and Falstaff, are often seen as astonishing late masterpieces.</li></ul><a href=\"#\" class=\"facts-toggle\" data-state=\"collapsed\" style=\"display:inline-block;margin:4px 0 0 15px;font-size:14px;text-decoration:underline;color:#000;cursor:pointer;\">Read more facts</a><div style=\"clear:both;\"></div></div>",
+        "markdown_id": "verdi"
       }
     },
     {
@@ -234,7 +258,8 @@
       },
       "text": {
         "headline": "Johann Strauss II",
-        "text": "To be added later"
+        "text": "<div id=\"comp-content\"><div style=\"font-weight:bold;margin-bottom:4px; margin-left:15px;\">Johann Strauss II essentials:</div><ul><li>Who he was: Austrian composer and conductor known as the &quot;Waltz King&quot;, son of Johann Strauss I.</li><li>Dance favorites: He wrote The Blue Danube, Tales from the Vienna Woods, the Emperor Waltz and many other waltzes and polkas.</li><li>Operetta success: His operetta Die Fledermaus captures the glittering, slightly ironic world of late 19th-century Vienna.</li><li class=\"fact fact--extra\" style=\"display:none;\">Viennese image: His music largely defines how people imagine the sound of old Vienna – swirling waltzes, champagne and ballrooms.</li></ul><a href=\"#\" class=\"facts-toggle\" data-state=\"collapsed\" style=\"display:inline-block;margin:4px 0 0 15px;font-size:14px;text-decoration:underline;color:#000;cursor:pointer;\">Read more facts</a><div style=\"clear:both;\"></div></div>",
+        "markdown_id": "johann-strauss-ii"
       }
     },
     {
@@ -246,7 +271,8 @@
       },
       "text": {
         "headline": "Johannes Brahms",
-        "text": "To be added later"
+        "text": "<div id=\"comp-content\"><div style=\"font-weight:bold;margin-bottom:4px; margin-left:15px;\">Johannes Brahms essentials:</div><ul><li>Who he was: German Romantic composer, pianist and conductor, based mainly in Hamburg and Vienna.</li><li>Symphonic craft: His four symphonies, concertos and chamber works are admired for their dense, organic development and structural control.</li><li>Heir to Beethoven: Many contemporaries saw him as Beethoven’s symphonic successor, which made him famously self-critical.</li><li class=\"fact fact--extra\" style=\"display:none;\">Absolute music: Unlike Wagner and Liszt, he focused on &quot;pure&quot; instrumental music rather than programmatic stories, fueling a famous aesthetic debate.</li><li class=\"fact fact--extra\" style=\"display:none;\">Friendships: His close relationships with Robert and Clara Schumann were central to his personal and artistic life.</li></ul><a href=\"#\" class=\"facts-toggle\" data-state=\"collapsed\" style=\"display:inline-block;margin:4px 0 0 15px;font-size:14px;text-decoration:underline;color:#000;cursor:pointer;\">Read more facts</a><div style=\"clear:both;\"></div></div>",
+        "markdown_id": "brahms"
       }
     },
     {
@@ -258,7 +284,8 @@
       },
       "text": {
         "headline": "Alexander Borodin",
-        "text": "To be added later"
+        "text": "<div id=\"comp-content\"><div style=\"font-weight:bold;margin-bottom:4px; margin-left:15px;\">Alexander Borodin essentials:</div><ul><li>Who he was: Russian composer and professional chemist, member of the nationalist group known as &quot;The Mighty Handful&quot; or &quot;The Five&quot;.</li><li>Double career: He made significant contributions to organic chemistry while composing in his limited spare time.</li><li>Signature works: His opera Prince Igor (with its famous Polovtsian Dances), two symphonies and In the Steppes of Central Asia are his best-known pieces.</li><li class=\"fact fact--extra\" style=\"display:none;\">Posthumous help: Friends like Rimsky-Korsakov and Glazunov edited and completed several of his works after his early death.</li></ul><a href=\"#\" class=\"facts-toggle\" data-state=\"collapsed\" style=\"display:inline-block;margin:4px 0 0 15px;font-size:14px;text-decoration:underline;color:#000;cursor:pointer;\">Read more facts</a><div style=\"clear:both;\"></div></div>",
+        "markdown_id": "borodin"
       }
     },
     {
@@ -270,7 +297,8 @@
       },
       "text": {
         "headline": "Camille Saint-Saëns",
-        "text": "To be added later"
+        "text": "<div id=\"comp-content\"><div style=\"font-weight:bold;margin-bottom:4px; margin-left:15px;\">Camille Saint-Saëns essentials:</div><ul><li>Who he was: French composer, pianist, organist and child prodigy, active from the mid-19th into the early 20th century.</li><li>Versatile output: He wrote symphonies, concertos, chamber music, operas and choral works, including the &quot;Organ&quot; Symphony and Samson and Delilah.</li><li>Carnival of the Animals: His humorous suite The Carnival of the Animals, originally written for a private event, is now one of his most popular pieces.</li><li class=\"fact fact--extra\" style=\"display:none;\">Musical organizer: He helped champion both older music (like Bach) and younger French composers, and co-founded the Société nationale de musique.</li></ul><a href=\"#\" class=\"facts-toggle\" data-state=\"collapsed\" style=\"display:inline-block;margin:4px 0 0 15px;font-size:14px;text-decoration:underline;color:#000;cursor:pointer;\">Read more facts</a><div style=\"clear:both;\"></div></div>",
+        "markdown_id": "saint-saens"
       }
     },
     {
@@ -282,7 +310,8 @@
       },
       "text": {
         "headline": "Georges Bizet",
-        "text": "To be added later"
+        "text": "<div id=\"comp-content\"><div style=\"font-weight:bold;margin-bottom:4px; margin-left:15px;\">Georges Bizet essentials:</div><ul><li>Who he was: French Romantic composer who died young but left one of the most famous operas ever written.</li><li>Carmen: His opera Carmen shocked some early audiences with its realism and &quot;dangerous&quot; heroine, yet it later became a cornerstone of the repertoire.</li><li>Other works: Music for L’Arlésienne and the opera The Pearl Fishers also remain popular in concert halls.</li><li class=\"fact fact--extra\" style=\"display:none;\">Tragic timing: He died at 36, shortly after Carmen’s troubled premiere, never seeing the scale of its later success.</li></ul><a href=\"#\" class=\"facts-toggle\" data-state=\"collapsed\" style=\"display:inline-block;margin:4px 0 0 15px;font-size:14px;text-decoration:underline;color:#000;cursor:pointer;\">Read more facts</a><div style=\"clear:both;\"></div></div>",
+        "markdown_id": "bizet"
       }
     },
     {
@@ -294,7 +323,8 @@
       },
       "text": {
         "headline": "Modest Mussorgsky",
-        "text": "To be added later"
+        "text": "<div id=\"comp-content\"><div style=\"font-weight:bold;margin-bottom:4px; margin-left:15px;\">Modest Mussorgsky essentials:</div><ul><li>Who he was: Russian composer and member of &quot;The Five&quot;, committed to creating a distinctly Russian style of music.</li><li>Bold style: His music often uses speech-like melodies, rough harmonies and vivid scenes drawn from Russian history and folklore.</li><li>Key works: The opera Boris Godunov, the piano suite Pictures at an Exhibition and the tone poem Night on Bald Mountain are his best-known pieces.</li><li class=\"fact fact--extra\" style=\"display:none;\">Revisions: Many of his works were left unfinished or rough and were later revised or orchestrated by others, especially Rimsky-Korsakov.</li></ul><a href=\"#\" class=\"facts-toggle\" data-state=\"collapsed\" style=\"display:inline-block;margin:4px 0 0 15px;font-size:14px;text-decoration:underline;color:#000;cursor:pointer;\">Read more facts</a><div style=\"clear:both;\"></div></div>",
+        "markdown_id": "mussorgsky"
       }
     },
     {
@@ -306,7 +336,8 @@
       },
       "text": {
         "headline": "Pyotr Ilyich Tchaikovsky",
-        "text": "To be added later"
+        "text": "<div id=\"comp-content\"><div style=\"font-weight:bold;margin-bottom:4px; margin-left:15px;\">Pyotr Ilyich Tchaikovsky essentials:</div><ul><li>Who he was: Russian Romantic composer whose music combines Western forms with a strong sense of melody and emotional directness.</li><li>Ballets and symphonies: Swan Lake, The Sleeping Beauty and The Nutcracker, along with his later symphonies, are central to 19th-century repertoire.</li><li>Concert favorites: His Piano Concerto No. 1 and Violin Concerto are beloved showpieces for soloists.</li><li class=\"fact fact--extra\" style=\"display:none;\">Emotional intensity: His music often feels highly personal, full of longing, drama and sudden mood shifts.</li><li class=\"fact fact--extra\" style=\"display:none;\">Global reach: He was one of the first Russian composers to achieve truly international fame in his own lifetime.</li></ul><a href=\"#\" class=\"facts-toggle\" data-state=\"collapsed\" style=\"display:inline-block;margin:4px 0 0 15px;font-size:14px;text-decoration:underline;color:#000;cursor:pointer;\">Read more facts</a><div style=\"clear:both;\"></div></div>",
+        "markdown_id": "tchaikovsky"
       }
     },
     {
@@ -318,7 +349,8 @@
       },
       "text": {
         "headline": "Antonín Dvořák",
-        "text": "To be added later"
+        "text": "<div id=\"comp-content\"><div style=\"font-weight:bold;margin-bottom:4px; margin-left:15px;\">Antonín Dvořák essentials:</div><ul><li>Who he was: Czech Romantic composer who blended classical forms with folk-inspired melodies and rhythms from Bohemia and Moravia.</li><li>New World: His Symphony &quot;From the New World&quot; was written during his stay in the United States and is one of the most popular symphonies ever.</li><li>Folk spirit: Works like the Slavonic Dances and the Cello Concerto in B minor show his gift for memorable tunes and dance-like energy.</li><li class=\"fact fact--extra\" style=\"display:none;\">American chapter: As director of the National Conservatory in New York, he encouraged American composers to draw on spirituals and Native American music.</li></ul><a href=\"#\" class=\"facts-toggle\" data-state=\"collapsed\" style=\"display:inline-block;margin:4px 0 0 15px;font-size:14px;text-decoration:underline;color:#000;cursor:pointer;\">Read more facts</a><div style=\"clear:both;\"></div></div>",
+        "markdown_id": "dvorak"
       }
     },
     {
@@ -330,7 +362,8 @@
       },
       "text": {
         "headline": "Edvard Grieg",
-        "text": "To be added later"
+        "text": "<div id=\"comp-content\"><div style=\"font-weight:bold;margin-bottom:4px; margin-left:15px;\">Edvard Grieg essentials:</div><ul><li>Who he was: Norwegian Romantic composer and pianist closely associated with his country’s national identity.</li><li>Peer Gynt: His incidental music for Peer Gynt, including &quot;Morning Mood&quot; and &quot;In the Hall of the Mountain King&quot;, became concert-hall hits.</li><li>Piano Concerto: His Piano Concerto in A minor is a favorite with audiences and soloists alike.</li><li class=\"fact fact--extra\" style=\"display:none;\">National color: He drew heavily on Norwegian folk tunes and dance rhythms, giving his music a distinctive Nordic flavor.</li></ul><a href=\"#\" class=\"facts-toggle\" data-state=\"collapsed\" style=\"display:inline-block;margin:4px 0 0 15px;font-size:14px;text-decoration:underline;color:#000;cursor:pointer;\">Read more facts</a><div style=\"clear:both;\"></div></div>",
+        "markdown_id": "grieg"
       }
     },
     {
@@ -342,7 +375,8 @@
       },
       "text": {
         "headline": "Nikolai Rimsky-Korsakov",
-        "text": "To be added later"
+        "text": "<div id=\"comp-content\"><div style=\"font-weight:bold;margin-bottom:4px; margin-left:15px;\">Nikolai Rimsky-Korsakov essentials:</div><ul><li>Who he was: Russian composer, teacher and master orchestrator, also a member of &quot;The Five&quot;.</li><li>Orchestral color: Pieces like Scheherazade, Capriccio Espagnol and the Russian Easter Festival Overture showcase his brilliant use of orchestral color.</li><li>Teacher: He taught at the Saint Petersburg Conservatory; students included Stravinsky and many other important composers.</li><li class=\"fact fact--extra\" style=\"display:none;\">Editor and arranger: He edited and orchestrated works by colleagues such as Mussorgsky and Borodin, shaping how their music is often heard.</li></ul><a href=\"#\" class=\"facts-toggle\" data-state=\"collapsed\" style=\"display:inline-block;margin:4px 0 0 15px;font-size:14px;text-decoration:underline;color:#000;cursor:pointer;\">Read more facts</a><div style=\"clear:both;\"></div></div>",
+        "markdown_id": "rimsky-korsakov"
       }
     },
     {
@@ -354,7 +388,8 @@
       },
       "text": {
         "headline": "Gustav Mahler",
-        "text": "To be added later"
+        "text": "<div id=\"comp-content\"><div style=\"font-weight:bold;margin-bottom:4px; margin-left:15px;\">Gustav Mahler essentials:</div><ul><li>Who he was: Austro-Bohemian late Romantic composer and one of the leading conductors of his era.</li><li>Big symphonies: His symphonies are vast in scale, mixing marches, folk tunes, chorales and existential questions about life and death.</li><li>Song and symphony: Works like Das Lied von der Erde blend symphonic writing with song cycles, using poetry from many cultures.</li><li class=\"fact fact--extra\" style=\"display:none;\">Conductor: He directed the Vienna Court Opera and later worked in New York, transforming orchestral and operatic standards.</li><li class=\"fact fact--extra\" style=\"display:none;\">Posthumous fame: He predicted &quot;my time will come&quot; – and indeed, his music saw a huge revival in the mid-20th century.</li></ul><a href=\"#\" class=\"facts-toggle\" data-state=\"collapsed\" style=\"display:inline-block;margin:4px 0 0 15px;font-size:14px;text-decoration:underline;color:#000;cursor:pointer;\">Read more facts</a><div style=\"clear:both;\"></div></div>",
+        "markdown_id": "mahler"
       }
     },
     {
@@ -366,7 +401,8 @@
       },
       "text": {
         "headline": "Claude Debussy",
-        "text": "To be added later"
+        "text": "<div id=\"comp-content\"><div style=\"font-weight:bold;margin-bottom:4px; margin-left:15px;\">Claude Debussy essentials:</div><ul><li>Who he was: French composer often linked with musical impressionism, though he disliked the term.</li><li>New sound world: Works like Prélude à l’après-midi d’un faune, La Mer and Pelléas et Mélisande create fluid, atmospheric soundscapes.</li><li>Piano miniatures: Pieces such as Clair de lune and the Préludes use new harmonies and textures that influenced jazz and film music.</li><li class=\"fact fact--extra\" style=\"display:none;\">Harmony and color: He broke away from traditional chord progressions, focusing on timbre and suggestion rather than clear-cut forms.</li></ul><a href=\"#\" class=\"facts-toggle\" data-state=\"collapsed\" style=\"display:inline-block;margin:4px 0 0 15px;font-size:14px;text-decoration:underline;color:#000;cursor:pointer;\">Read more facts</a><div style=\"clear:both;\"></div></div>",
+        "markdown_id": "debussy"
       }
     },
     {
@@ -378,7 +414,8 @@
       },
       "text": {
         "headline": "Erik Satie",
-        "text": "To be added later"
+        "text": "<div id=\"comp-content\"><div style=\"font-weight:bold;margin-bottom:4px; margin-left:15px;\">Erik Satie essentials:</div><ul><li>Who he was: Eccentric French composer and pianist, active in Paris around the turn of the 20th century.</li><li>Quiet revolutions: His Gymnopédies and Gnossiennes use simple, repetitive patterns and unusual harmonies that foreshadow minimalism.</li><li>Deadpan humor: He often gave his pieces odd titles and filled scores with surreal performance instructions.</li><li class=\"fact fact--extra\" style=\"display:none;\">Influence: Though he wrote relatively little, his ideas influenced Debussy, Ravel and later avant-garde composers like John Cage.</li></ul><a href=\"#\" class=\"facts-toggle\" data-state=\"collapsed\" style=\"display:inline-block;margin:4px 0 0 15px;font-size:14px;text-decoration:underline;color:#000;cursor:pointer;\">Read more facts</a><div style=\"clear:both;\"></div></div>",
+        "markdown_id": "satie"
       }
     },
     {
@@ -390,7 +427,8 @@
       },
       "text": {
         "headline": "Alexander Scriabin",
-        "text": "To be added later"
+        "text": "<div id=\"comp-content\"><div style=\"font-weight:bold;margin-bottom:4px; margin-left:15px;\">Alexander Scriabin essentials:</div><ul><li>Who he was: Russian composer and pianist whose style evolved from Chopin-like Romanticism to highly individual, mystical harmonies.</li><li>Piano focus: He wrote many characterful piano pieces and ten piano sonatas that trace his journey into more dissonant territory.</li><li>Orchestral visions: Works like The Poem of Ecstasy and Prometheus: The Poem of Fire aim for ecstatic, almost otherworldly experiences.</li><li class=\"fact fact--extra\" style=\"display:none;\">Mystical ideas: Influenced by theosophy, he imagined music as part of a grand spiritual transformation of humanity.</li></ul><a href=\"#\" class=\"facts-toggle\" data-state=\"collapsed\" style=\"display:inline-block;margin:4px 0 0 15px;font-size:14px;text-decoration:underline;color:#000;cursor:pointer;\">Read more facts</a><div style=\"clear:both;\"></div></div>",
+        "markdown_id": "scriabin"
       }
     },
     {
@@ -402,7 +440,8 @@
       },
       "text": {
         "headline": "Sergei Rachmaninoff",
-        "text": "To be added later"
+        "text": "<div id=\"comp-content\"><div style=\"font-weight:bold;margin-bottom:4px; margin-left:15px;\">Sergei Rachmaninoff essentials:</div><ul><li>Who he was: Russian composer, virtuoso pianist and conductor, a late Romantic whose career spanned pre- and post-revolutionary Russia.</li><li>Piano showpieces: His Piano Concertos No. 2 and 3 and the Rhapsody on a Theme of Paganini are milestones of the piano repertoire.</li><li>Lush style: He favored long, singing melodies, rich harmonies and dark orchestral colors.</li><li class=\"fact fact--extra\" style=\"display:none;\">Exile: After the 1917 Revolution he left Russia and lived mainly in the United States, earning his living primarily as a touring pianist.</li></ul><a href=\"#\" class=\"facts-toggle\" data-state=\"collapsed\" style=\"display:inline-block;margin:4px 0 0 15px;font-size:14px;text-decoration:underline;color:#000;cursor:pointer;\">Read more facts</a><div style=\"clear:both;\"></div></div>",
+        "markdown_id": "rachmaninoff"
       }
     },
     {
@@ -414,7 +453,8 @@
       },
       "text": {
         "headline": "Maurice Ravel",
-        "text": "To be added later"
+        "text": "<div id=\"comp-content\"><div style=\"font-weight:bold;margin-bottom:4px; margin-left:15px;\">Maurice Ravel essentials:</div><ul><li>Who he was: French composer and master orchestrator, often associated with impressionism but with a very precise, classical sense of form.</li><li>Boléro: His slowly intensifying piece Boléro, built almost entirely on one melody and rhythm, became unexpectedly famous worldwide.</li><li>Color and craft: Works like Daphnis et Chloé, La Valse and his piano concertos show his fascination with texture, rhythm and clarity.</li><li class=\"fact fact--extra\" style=\"display:none;\">Orchestrator: His orchestration of Mussorgsky’s Pictures at an Exhibition is now the most frequently performed version.</li></ul><a href=\"#\" class=\"facts-toggle\" data-state=\"collapsed\" style=\"display:inline-block;margin:4px 0 0 15px;font-size:14px;text-decoration:underline;color:#000;cursor:pointer;\">Read more facts</a><div style=\"clear:both;\"></div></div>",
+        "markdown_id": "ravel"
       }
     },
     {
@@ -426,7 +466,8 @@
       },
       "text": {
         "headline": "Igor Stravinsky",
-        "text": "To be added later"
+        "text": "<div id=\"comp-content\"><div style=\"font-weight:bold;margin-bottom:4px; margin-left:15px;\">Igor Stravinsky essentials:</div><ul><li>Who he was: Russian-born composer who reinvented his style several times and became one of the defining voices of 20th-century music.</li><li>Ballet breakthroughs: His early ballets The Firebird, Petrushka and The Rite of Spring for Diaghilev’s Ballets Russes changed orchestral sound and rhythm.</li><li>Rite of Spring scandal: The 1913 premiere of The Rite of Spring in Paris caused a notorious uproar in the audience, becoming a symbol of musical modernism.</li><li class=\"fact fact--extra\" style=\"display:none;\">Changing styles: Over his long life he moved from Russian primitivism to neoclassicism and later to experiments with serial techniques.</li></ul><a href=\"#\" class=\"facts-toggle\" data-state=\"collapsed\" style=\"display:inline-block;margin:4px 0 0 15px;font-size:14px;text-decoration:underline;color:#000;cursor:pointer;\">Read more facts</a><div style=\"clear:both;\"></div></div>",
+        "markdown_id": "stravinsky"
       }
     },
     {
@@ -438,7 +479,8 @@
       },
       "text": {
         "headline": "Sergei Prokofiev",
-        "text": "To be added later"
+        "text": "<div id=\"comp-content\"><div style=\"font-weight:bold;margin-bottom:4px; margin-left:15px;\">Sergei Prokofiev essentials:</div><ul><li>Who he was: Russian and Soviet composer and pianist known for his sharp rhythms, bold harmonies and memorable tunes.</li><li>Popular works: His ballet Romeo and Juliet, the children’s piece Peter and the Wolf and the &quot;Classical&quot; Symphony are among his most beloved works.</li><li>Stage and screen: He wrote important film scores, including music for Sergei Eisenstein’s films Alexander Nevsky and Ivan the Terrible.</li><li class=\"fact fact--extra\" style=\"display:none;\">Life between worlds: After years in the West he returned to the Soviet Union, where he balanced his own modernist instincts with official cultural demands.</li><li class=\"fact fact--extra\" style=\"display:none;\">Strange coincidence: He died on the same day as Joseph Stalin in 1953, which overshadowed news of his death.</li></ul><a href=\"#\" class=\"facts-toggle\" data-state=\"collapsed\" style=\"display:inline-block;margin:4px 0 0 15px;font-size:14px;text-decoration:underline;color:#000;cursor:pointer;\">Read more facts</a><div style=\"clear:both;\"></div></div>",
+        "markdown_id": "prokofiev"
       }
     }
   ],
