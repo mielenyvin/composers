@@ -413,6 +413,9 @@ export class TimeNav {
                 data.end_date,
                 data.headline,
                 this.options);
+            if (i === 0) {
+                era.alignHeadlineRight();
+            }
             this._eras.push(era);
             era.addTo(this._el.marker_item_container);
             era.on('added', this._onEraAdded, this);

@@ -551,20 +551,20 @@ export function initKnightlabTimeline(containerId) {
     const compContentHeightComputed =
       compContentEl && window.getComputedStyle
         ? parseFloat(
-            window
-              .getComputedStyle(compContentEl, null)
-              .getPropertyValue("height")
-          ) || compContentEl.offsetHeight || 0
+          window
+            .getComputedStyle(compContentEl, null)
+            .getPropertyValue("height")
+        ) || compContentEl.offsetHeight || 0
         : compContentEl
           ? compContentEl.offsetHeight
           : 0;
     const headlineHeightComputed =
       headlineEl && window.getComputedStyle
         ? parseFloat(
-            window
-              .getComputedStyle(headlineEl, null)
-              .getPropertyValue("height")
-          ) || headlineEl.offsetHeight || 0
+          window
+            .getComputedStyle(headlineEl, null)
+            .getPropertyValue("height")
+        ) || headlineEl.offsetHeight || 0
         : headlineEl
           ? headlineEl.offsetHeight
           : 0;

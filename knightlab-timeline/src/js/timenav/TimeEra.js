@@ -147,6 +147,19 @@ export class TimeEra {
 
     }
 
+    alignHeadlineRight() {
+        if (!this._text) {
+            return;
+        }
+
+        this._text.style.left = "0";
+        this._text.style.right = "0";
+        this._text.style.marginLeft = "0";
+        this._text.style.padding = "0 10px";
+        this._text.style.textAlign = "right";
+        this._text.style.boxSizing = "border-box";
+    }
+
     setClass(n) {
         this._el.container.className = n;
     }
