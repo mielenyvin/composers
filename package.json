@@ -14,7 +14,8 @@
     "lint": "eslint . --fix --cache",
     "format": "prettier --write src/",
     "deploy": "npm run build && npm run deploy:rsync",
-    "deploy:rsync": "rsync -az --delete --no-perms --no-owner --no-group -e \"ssh -i ~/.ssh/default_my\" dist/ root@139.59.136.231:/composers/"
+    "deploy:rsync": "rsync -az --delete --no-perms --no-owner --no-group -e \"ssh -i ~/.ssh/default_my\" dist/ root@139.59.136.231:/composers/",
+    "deploy:backend": "rsync -az --delete --no-perms --no-owner --no-group -e \"ssh -i ~/.ssh/default_my\" server/ root@139.59.136.231:/var/www/composers-backend/server/ && ssh -i ~/.ssh/default_my root@139.59.136.231 'cd /var/www/composers-backend && pm2 restart composers-soundcloud'"
   },
   "dependencies": {
     "dotenv": "^17.2.3",

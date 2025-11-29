@@ -3,6 +3,7 @@
 const SOUND_CLOUD_PROXY_BASE = "/api/soundcloud";
 const SOUND_CLOUD_RESOLVE_ENDPOINT = `${SOUND_CLOUD_PROXY_BASE}/playlist`;
 const SOUND_CLOUD_STREAMS_ENDPOINT = `${SOUND_CLOUD_PROXY_BASE}/streams`;
+const SOUND_CLOUD_TRANSCODING_ENDPOINT = `${SOUND_CLOUD_PROXY_BASE}/transcoding`;
 
 // Keep only one audio element playing at a time
 let activeAudio = null;
@@ -28,44 +29,6 @@ function stopActiveAudio(resetPosition = true) {
   activeAudioButton = null;
 }
 
-function normalizeStreamValue(val) {
-  if (!val) return null;
-  if (typeof val === "string") return val;
-  if (Array.isArray(val)) {
-    for (const entry of val) {
-      const normalized = normalizeStreamValue(entry);
-      if (normalized) return normalized;
-    }
-  }
-  if (typeof val === "object" && val.url) {
-    return val.url;
-  }
-  return null;
-}
-
-function pickStreamUrl(streams) {
-  if (!streams || typeof streams !== "object") return null;
-
-  const preference = [
-    "progressive",
-    "hls_mp3",
-    "hls",
-    "http_mp3_128_url",
-    "preview_mp3_128_url",
-  ];
-
-  for (const key of preference) {
-    const candidate = normalizeStreamValue(streams[key]);
-    if (candidate) return candidate;
-  }
-
-  for (const value of Object.values(streams)) {
-    const candidate = normalizeStreamValue(value);
-    if (candidate) return candidate;
-  }
-
-  return null;
-}
 
 async function fetchSoundCloudPlaylist(playlistUrl) {
   const url = `${SOUND_CLOUD_RESOLVE_ENDPOINT}?url=${encodeURIComponent(
@@ -98,19 +61,91 @@ async function fetchSoundCloudStreamUrl(trackId) {
   }
 
   const data = await resp.json();
-  const url = pickStreamUrl(data);
+  console.debug("[SC] Streams endpoint response (proxied)", { trackId, data });
 
-  if (!url) {
+  if (!data || !data.url) {
     throw new Error("No playable SoundCloud stream URL found");
   }
 
-  return url;
+  // Это уже финальный MP3/CDN URL, который можно отдавать <audio>
+  return data.url;
+}
+
+// Helper to resolve media.transcodings via backend proxy
+async function fetchSoundCloudTranscodingUrl(transcodingUrl) {
+  if (!transcodingUrl) {
+    throw new Error("No transcoding url provided");
+  }
+
+  const resp = await fetch(
+    `${SOUND_CLOUD_TRANSCODING_ENDPOINT}?url=${encodeURIComponent(transcodingUrl)}`
+  );
+
+  if (!resp.ok) {
+    const err = new Error(`SoundCloud transcoding error: ${resp.status}`);
+    err.status = resp.status;
+    throw err;
+  }
+
+  const data = await resp.json();
+  console.debug("[SC] Transcoding endpoint response (proxied)", {
+    transcodingUrl,
+    data,
+  });
+
+  if (!data || !data.url) {
+    throw new Error("SoundCloud transcoding response missing url");
+  }
+
+  return data.url;
 }
 
 async function resolveSoundCloudStreamUrl(track) {
-  if (!track || !track.id) {
+  if (!track) {
     throw new Error("No track provided");
   }
+
+  // First try media.transcodings, like in the original working version
+  const transcodings =
+    track.media && Array.isArray(track.media.transcodings)
+      ? track.media.transcodings
+      : [];
+
+  if (transcodings.length) {
+    let chosen = transcodings.find(
+      (t) =>
+        t &&
+        t.format &&
+        t.format.protocol === "progressive"
+    );
+
+    if (!chosen) {
+      chosen = transcodings[0];
+    }
+
+    if (chosen && chosen.url) {
+      try {
+        const finalUrl = await fetchSoundCloudTranscodingUrl(chosen.url);
+        console.debug("[SC] Using transcoding URL", {
+          trackId: track.id,
+          transcodingUrl: chosen.url,
+          finalUrl,
+        });
+        return finalUrl;
+      } catch (err) {
+        console.error(
+          "[SC] Transcoding proxy failed, falling back to streams endpoint",
+          err
+        );
+      }
+    }
+  }
+
+  if (!track.id) {
+    throw new Error("No track id provided");
+  }
+
+  // Fallback - use streams endpoint
   return fetchSoundCloudStreamUrl(track.id);
 }
 
