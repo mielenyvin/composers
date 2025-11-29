@@ -21,7 +21,7 @@ function stopActiveAudio(resetPosition = true) {
 
   if (activeAudioButton) {
     activeAudioButton.dataset.state = "paused";
-    activeAudioButton.textContent = "Play";
+    activeAudioButton.textContent = "▶";
   }
 
   activeAudio = null;
@@ -114,7 +114,61 @@ async function resolveSoundCloudStreamUrl(track) {
   return fetchSoundCloudStreamUrl(track.id);
 }
 
-function renderSoundCloudPlayer(container, tracks = []) {
+function appendSoundCloudAttribution(container) {
+  if (!container) return;
+
+  const attribution = document.createElement("div");
+  attribution.className = "sc-attribution";
+  attribution.style.marginTop = "6px";
+  attribution.style.display = "flex";
+  attribution.style.justifyContent = "flex-start";
+
+  const attributionLink = document.createElement("a");
+  attributionLink.href = "https://soundcloud.com";
+  attributionLink.target = "_blank";
+  attributionLink.rel = "noopener noreferrer";
+
+  const attributionImg = document.createElement("img");
+  attributionImg.src =
+    "/timeline/images/powered_by_black-4339b4c3c9cf88da9bfb15a16c4f6914.png";
+  attributionImg.alt = "Powered by SoundCloud";
+  attributionImg.style.height = "23px";
+  attributionImg.style.display = "block";
+  attributionImg.style.cursor = "pointer";
+
+  attributionLink.appendChild(attributionImg);
+  attribution.appendChild(attributionLink);
+  container.appendChild(attribution);
+}
+
+function showFallbackPlayer(container, playlistUrl) {
+  if (!playlistUrl) {
+    container.innerHTML =
+      '<div class="sc-player__status sc-player__status--error">SoundCloud временно вернул 429 (rate limit).</div>';
+    container.dataset.soundcloudReady = "fallback";
+    return;
+  }
+
+  const encoded = encodeURIComponent(playlistUrl);
+  const iframeSrc =
+    "https://w.soundcloud.com/player/?url=" +
+    encoded +
+    "&visual=false&show_artwork=false&show_teaser=false&color=%23000000&show_user=false&buying=false&sharing=false&show_playcount=false";
+
+  container.innerHTML = `
+    <iframe
+      width="100%"
+      height="360"
+      scrolling="no"
+      frameborder="no"
+      allow="autoplay"
+      src="${iframeSrc}"
+    ></iframe>
+  `;
+  container.dataset.soundcloudReady = "fallback";
+}
+
+function renderSoundCloudPlayer(container, tracks = [], playlistUrl = "") {
   container.innerHTML = "";
 
   if (!tracks.length) {
@@ -126,21 +180,51 @@ function renderSoundCloudPlayer(container, tracks = []) {
 
   const list = document.createElement("div");
   list.className = "sc-track-list";
+  // Simple neutral list styling (inline to avoid CSS coupling)
+  list.style.margin = "0";
+  list.style.padding = "0";
+  list.style.fontFamily = "inherit";
+  list.style.fontSize = "14px";
 
   tracks.forEach((track, index) => {
     const row = document.createElement("div");
     row.className = "sc-track";
+    // Simple horizontal row with only a divider line between tracks
+    row.style.display = "flex";
+    row.style.alignItems = "center";
+    row.style.margin = "0";
+    row.style.borderBottom = "1px solid #ddd";
+    row.style.borderRadius = "0";
+    row.style.background = "transparent";
 
     const button = document.createElement("button");
     button.type = "button";
     button.className = "sc-track__button";
     button.dataset.state = "paused";
     button.setAttribute("aria-label", `Play ${track.title || "track"}`);
-    button.textContent = "Play";
+    // Use Play symbol
+    button.textContent = "▶";
+    // Remove decoration: no shadows, no rounded corners, no margins
+    button.style.margin = "0";
+    // Make the button narrower and shorter
+    button.style.padding = "0 4px";
+    button.style.borderRadius = "0";
+    button.style.boxShadow = "none";
+    button.style.background = "transparent";
+    button.style.border = "none";
+    button.style.color = "#000";
+    button.style.fontFamily = "inherit";
+    // Slightly smaller icon size to match the smaller button
+    button.style.fontSize = "12px";
+    button.style.lineHeight = "1";
+    button.style.cursor = "pointer";
 
     const title = document.createElement("div");
     title.className = "sc-track__title";
     title.textContent = track.title || `Track ${index + 1}`;
+    title.style.margin = "0";
+    title.style.padding = "0";
+    title.style.fontWeight = "normal";
 
     // Lazy-load audio stream URL on first play
     const audio = new Audio();
@@ -170,8 +254,11 @@ function renderSoundCloudPlayer(container, tracks = []) {
         } catch (err) {
           console.error("Unable to load SoundCloud stream", err);
           button.dataset.state = "paused";
-          button.textContent = "Play";
+          button.textContent = "▶";
           button.disabled = false;
+          if (err && err.status === 429 && playlistUrl) {
+            showFallbackPlayer(container, playlistUrl);
+          }
           return;
         }
 
@@ -185,11 +272,14 @@ function renderSoundCloudPlayer(container, tracks = []) {
           activeAudio = audio;
           activeAudioButton = button;
           button.dataset.state = "playing";
-          button.textContent = "Stop";
+          button.textContent = "⏸";
         } catch (err) {
           console.error("Unable to play SoundCloud track", err);
           button.dataset.state = "paused";
-          button.textContent = "Play";
+          button.textContent = "▶";
+          if (err && err.status === 429 && playlistUrl) {
+            showFallbackPlayer(container, playlistUrl);
+          }
         }
       } else {
         stopActiveAudio();
@@ -202,21 +292,30 @@ function renderSoundCloudPlayer(container, tracks = []) {
   });
 
   container.appendChild(list);
+  appendSoundCloudAttribution(container);
   container.dataset.soundcloudReady = "true";
 }
 
-async function hydrateSoundCloudPlayer(container) {
+async function hydrateSoundCloudPlayer(container, onReady) {
+  const finalize = () => {
+    if (typeof onReady === "function") {
+      // Defer slightly so layout has time to settle
+      setTimeout(() => onReady(), 0);
+    }
+  };
   if (
     !container ||
     container.dataset.soundcloudReady === "true" ||
     container.dataset.soundcloudReady === "loading" ||
     container.dataset.soundcloudReady === "error"
   ) {
+    finalize();
     return;
   }
 
   const playlistUrl = container.getAttribute("data-soundcloud-playlist");
   if (!playlistUrl) {
+    finalize();
     return;
   }
 
@@ -232,22 +331,41 @@ async function hydrateSoundCloudPlayer(container) {
         : playlist && playlist.kind === "track"
           ? [playlist]
           : [];
-    renderSoundCloudPlayer(container, tracks);
+    renderSoundCloudPlayer(container, tracks, playlistUrl);
+    finalize();
   } catch (error) {
     console.error("Failed to build SoundCloud player", error);
     const isRateLimited = error && error.status === 429;
-    const message = isRateLimited
-      ? "SoundCloud temporarily returned 429 (rate limit). Please try again later."
-      : "Could not load SoundCloud playlist"
-    container.innerHTML = `<div class="sc-player__status sc-player__status--error">${message}</div>`;
-    container.dataset.soundcloudReady = "error";
+    if (isRateLimited) {
+      showFallbackPlayer(container, playlistUrl);
+    } else {
+      container.innerHTML =
+        '<div class="sc-player__status sc-player__status--error">Could not load SoundCloud playlist</div>';
+      container.dataset.soundcloudReady = "error";
+    }
+    finalize();
   }
 }
 
-function initSoundCloudPlayers() {
+function initSoundCloudPlayers(onAllReady) {
   const containers = document.querySelectorAll("[data-soundcloud-playlist]");
+
+  if (!containers.length) {
+    if (typeof onAllReady === "function") {
+      onAllReady();
+    }
+    return;
+  }
+
+  let remaining = containers.length;
+
   containers.forEach((container) => {
-    hydrateSoundCloudPlayer(container);
+    hydrateSoundCloudPlayer(container, () => {
+      remaining -= 1;
+      if (remaining === 0 && typeof onAllReady === "function") {
+        onAllReady();
+      }
+    });
   });
 }
 
@@ -268,13 +386,14 @@ export function initKnightlabTimeline(containerId) {
         return;
       }
 
-      if (typeof SC === "undefined" || !SC.Widget) {
+      const sc = window.SC;
+      if (!sc || !sc.Widget) {
         return;
       }
 
       try {
         // SC is loaded globally from index.html
-        const widget = SC.Widget(iframe);
+        const widget = sc.Widget(iframe);
         widget.pause();
       } catch (e) {
         console.error("Could not control SoundCloud widget:", e);
@@ -345,7 +464,7 @@ export function initKnightlabTimeline(containerId) {
   let baseTimenavHeight = 75;
   let baseHeightRecalcTimeout = null;
 
-  function recalcBaseTimenavHeight(reason = "auto") {
+  function recalcBaseTimenavHeight() {
     if (baseHeightRecalcTimeout) {
       clearTimeout(baseHeightRecalcTimeout);
     }
@@ -387,7 +506,7 @@ export function initKnightlabTimeline(containerId) {
         (window.timeline && window.timeline.current_id) ||
         window.location.hash ||
         "";
-      applyTimenavHeight(idForHeight, reason);
+      applyTimenavHeight(idForHeight);
     }, 120);
   }
 
@@ -395,8 +514,133 @@ export function initKnightlabTimeline(containerId) {
   const COLLAPSED_TIMENAV_HEIGHT = 20;
   const MOBILE_WIDTH_BREAKPOINT = 640;
 
+  // Helper to compute dynamic timenav height percent for the current slide
+  function computeDynamicTimenavPercent(index) {
+    // Only for event slides, not for the title (index === -1)
+    if (index < 0) {
+      return null;
+    }
+
+    const embedEl = document.getElementById(containerId);
+    if (!embedEl) return null;
+
+    const slideEl =
+      document.querySelector(".tl-slide.tl-slide-visible") ||
+      document.querySelector(".tl-slide.tl-slide-current");
+    const textContentContainer =
+      (slideEl &&
+        slideEl.querySelector(".tl-text-content-container")) ||
+      null;
+    const textEl =
+      (slideEl && slideEl.querySelector(".tl-text-content")) || null;
+    const textInner =
+      (textEl && (textEl.firstElementChild || textEl)) ||
+      (textContentContainer && textContentContainer.firstElementChild) ||
+      null;
+    const scPlayerEl =
+      (slideEl && slideEl.querySelector(".sc-player")) || null;
+    const slideTextEl =
+      (slideEl && slideEl.querySelector(".tl-text")) || null;
+
+    const headlineEl =
+      (slideEl && slideEl.querySelector(".tl-text-headline-container")) ||
+      document.querySelector(".tl-text-headline-container");
+    const compContentNodes = document.querySelectorAll("#comp-content");
+    const compContentEl =
+      index >= 0 && compContentNodes[index] ? compContentNodes[index] : null;
+    const compContentHeightComputed =
+      compContentEl && window.getComputedStyle
+        ? parseFloat(
+            window
+              .getComputedStyle(compContentEl, null)
+              .getPropertyValue("height")
+          ) || compContentEl.offsetHeight || 0
+        : compContentEl
+          ? compContentEl.offsetHeight
+          : 0;
+    const headlineHeightComputed =
+      headlineEl && window.getComputedStyle
+        ? parseFloat(
+            window
+              .getComputedStyle(headlineEl, null)
+              .getPropertyValue("height")
+          ) || headlineEl.offsetHeight || 0
+        : headlineEl
+          ? headlineEl.offsetHeight
+          : 0;
+
+    const availableHeight = embedEl.offsetHeight;
+    if (!availableHeight) {
+      return null;
+    }
+
+    let contentHeight = 0;
+    const candidates = [
+      textInner,
+      textEl,
+      textContentContainer,
+      scPlayerEl,
+      slideTextEl,
+      compContentEl,
+    ].filter(Boolean);
+
+    if (candidates.length) {
+      contentHeight = Math.max(
+        ...candidates.map((el) =>
+          Math.max(el.scrollHeight || 0, el.offsetHeight || 0)
+        )
+      );
+    } else if (headlineEl && compContentEl) {
+      contentHeight = headlineEl.offsetHeight + compContentEl.offsetHeight;
+    }
+
+    // Add computed heights for headline + comp-content (by slide index) when available
+    if (compContentHeightComputed || headlineHeightComputed) {
+      const combined =
+        (compContentHeightComputed || 0) + (headlineHeightComputed || 0);
+      if (combined > contentHeight) {
+        contentHeight = combined;
+      }
+    }
+
+    // Small extra headroom for the text block
+    contentHeight += 10;
+
+    const rawPercent = Math.round(
+      100 * (1 - contentHeight / availableHeight)
+    );
+
+    if (!Number.isFinite(rawPercent)) {
+      return null;
+    }
+
+    // At least 27% timenav height
+    const clamped = rawPercent < 27 ? 27 : rawPercent;
+
+    // Debug heights for diagnosing overlap
+    console.log("[timenav-height]", {
+      slideIndex: index,
+      availableHeight,
+      contentHeight,
+      rawPercent,
+      clampedPercent: clamped,
+      textInnerHeight: textInner ? textInner.offsetHeight : null,
+      textElHeight: textEl ? textEl.offsetHeight : null,
+      textContentContainerHeight: textContentContainer
+        ? textContentContainer.offsetHeight
+        : null,
+      scPlayerHeight: scPlayerEl ? scPlayerEl.offsetHeight : null,
+      slideTextHeight: slideTextEl ? slideTextEl.offsetHeight : null,
+      headlineElHeight: headlineEl ? headlineEl.offsetHeight : null,
+      compContentHeight: compContentEl ? compContentEl.offsetHeight : null,
+      compContentHeightComputed,
+    });
+
+    return clamped;
+  }
+
   // Apply timenav/story heights based on current slide
-  function applyTimenavHeight(uniqueId, source) {
+  function applyTimenavHeight(uniqueId) {
     if (
       !window.timeline ||
       !window.timeline.config ||
@@ -428,17 +672,32 @@ export function initKnightlabTimeline(containerId) {
 
     const index = events.findIndex((ev) => ev.unique_id === normalizedId);
 
-    let percent;
+    let percentBase;
 
     if (index < 0) {
       // Title slide or unknown ID: always use the base timenav height
-      percent = basePercent;
+      percentBase = basePercent;
     } else if (index in TIMENAV_HEIGHT_BY_INDEX) {
       // Event slides with explicit override
-      percent = TIMENAV_HEIGHT_BY_INDEX[index];
+      percentBase = TIMENAV_HEIGHT_BY_INDEX[index];
     } else {
       // Other event slides: fall back to basePercent
-      percent = basePercent;
+      percentBase = basePercent;
+    }
+
+    // Dynamically compute timenav height for this slide
+    const dynamicPercent = computeDynamicTimenavPercent(index);
+
+    let percent = percentBase;
+
+    if (typeof dynamicPercent === "number") {
+      // Choose the larger of the default value and the dynamic one
+      percent = Math.max(percentBase, dynamicPercent);
+    }
+
+    // Ensure a minimum timenav height of 27%
+    if (percent < 27) {
+      percent = 27;
     }
 
     if (isCollapsed) {
@@ -495,7 +754,83 @@ export function initKnightlabTimeline(containerId) {
       window.timeline.updateDisplay();
     }
 
-    recalcBaseTimenavHeight("viewport-resize");
+    recalcBaseTimenavHeight();
+  }
+
+  function applyHeightForCurrentSlide() {
+    const idForHeight =
+      (window.timeline && window.timeline.current_id) ||
+      window.location.hash ||
+      "";
+    // Defer to next tick so slide DOM settles
+    setTimeout(() => applyTimenavHeight(idForHeight), 0);
+  }
+
+  // Observe slide text height changes (e.g., when SoundCloud list finishes rendering)
+  let slideResizeObserver = null;
+  let resizeRaf = null;
+
+  function attachSlideResizeObserver() {
+    if (typeof ResizeObserver === "undefined") {
+      return;
+    }
+
+    if (slideResizeObserver) {
+      slideResizeObserver.disconnect();
+    }
+
+    const slideEl =
+      document.querySelector(".tl-slide.tl-slide-visible") ||
+      document.querySelector(".tl-slide.tl-slide-current");
+    const textEl =
+      (slideEl && slideEl.querySelector(".tl-text-content")) || null;
+    const textInner =
+      (textEl && (textEl.firstElementChild || textEl)) ||
+      (slideEl &&
+        slideEl.querySelector(".tl-text-content-container") &&
+        slideEl
+          .querySelector(".tl-text-content-container")
+          .firstElementChild) ||
+      null;
+    const textContentContainer =
+      (slideEl &&
+        slideEl.querySelector(".tl-text-content-container")) ||
+      null;
+    const scPlayerEl =
+      (slideEl && slideEl.querySelector(".sc-player")) || null;
+    const compContentEl = document.getElementById("comp-content");
+    const slideTextEl =
+      (slideEl && slideEl.querySelector(".tl-text")) || null;
+
+    const targets = [
+      textInner,
+      textEl,
+      textContentContainer,
+      scPlayerEl,
+      compContentEl,
+      slideTextEl,
+    ].filter(Boolean);
+
+    if (!targets.length) {
+      return;
+    }
+
+    slideResizeObserver = new ResizeObserver(() => {
+      if (resizeRaf) {
+        cancelAnimationFrame(resizeRaf);
+      }
+      resizeRaf = requestAnimationFrame(() => {
+        applyHeightForCurrentSlide();
+      });
+    });
+
+    targets.forEach((el) => slideResizeObserver.observe(el));
+  }
+
+  function scheduleHeightRecalcAfterContent() {
+    applyHeightForCurrentSlide();
+    setTimeout(applyHeightForCurrentSlide, 200);
+    setTimeout(applyHeightForCurrentSlide, 1000);
   }
 
   function positionCollapseControls() {
@@ -541,7 +876,7 @@ export function initKnightlabTimeline(containerId) {
   function biasTimeNav(tnav) {
     if (!tnav || !tnav.animateMovement) return;
     const originalDispatch = tnav._dispatchVisibleTicksChange.bind(tnav);
-    tnav.animateMovement = function (n, fast, css_animation) {
+    tnav.animateMovement = function (n, fast) {
       if (this.animator && typeof this.animator.stop === "function") {
         this.animator.stop();
       }
@@ -563,7 +898,13 @@ export function initKnightlabTimeline(containerId) {
   }
 
   // Create global timeline instance
-  window.timeline = new TL.Timeline(containerId, timelineJson, {
+  const timelineLib = window.TL;
+  if (!timelineLib || !timelineLib.Timeline) {
+    console.error("TimelineJS library not available on window.TL");
+    return null;
+  }
+
+  window.timeline = new timelineLib.Timeline(containerId, timelineJson, {
     timenav_height_percentage: baseTimenavHeight,
     timenav_position: "bottom",
     hash_bookmark: true,
@@ -578,15 +919,22 @@ export function initKnightlabTimeline(containerId) {
       biasTimeNav(window.timeline._timenav);
       const initialId =
         window.timeline.current_id || window.location.hash || "";
-      applyTimenavHeight(initialId, "ready-initial");
-      recalcBaseTimenavHeight("ready-auto");
-      initSoundCloudPlayers();
+      applyTimenavHeight(initialId);
+      recalcBaseTimenavHeight();
 
-      // Update timenav height on every slide change
-      window.timeline.on("change", (e) => {
+      // Initialize SoundCloud players, then re-apply height once they are rendered
+      initSoundCloudPlayers(() => {
+        scheduleHeightRecalcAfterContent();
+        attachSlideResizeObserver();
+      });
+
+      // Update timenav height on every slide change, but wait for SoundCloud block to load
+      window.timeline.on("change", () => {
         stopActiveAudio();
-        initSoundCloudPlayers();
-        applyTimenavHeight(e.unique_id, "change");
+        initSoundCloudPlayers(() => {
+          scheduleHeightRecalcAfterContent();
+          attachSlideResizeObserver();
+        });
       });
 
       // Add Collapse button above timenav
@@ -649,7 +997,7 @@ export function initKnightlabTimeline(containerId) {
       event.target.innerHTML = isCollapsed ? "▲" : "▼";
 
       const idForHeight = currentSlide || window.location.hash || "";
-      applyTimenavHeight(idForHeight, "toggle-collapse");
+      applyTimenavHeight(idForHeight);
     }
   });
 
