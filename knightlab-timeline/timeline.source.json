@@ -20,7 +20,7 @@
         "headline": "Antonio Vivaldi",
         "markdown_id": "vivaldi",
         "essentials_label": "Vivaldi essentials",
-        "image_url": "/timeline/images/vivaldi.png",
+        "image_url": "/timeline/images/comp_new/vivaldi.jpg",
         "playlist_url": "https://soundcloud.com/dmitry-kotikov/sets/antonio-vivaldi",
         "text": ""
       }
@@ -36,7 +36,7 @@
         "headline": "Johann Sebastian Bach",
         "markdown_id": "bach",
         "essentials_label": "Bach essentials",
-        "image_url": "/timeline/images/bach.png",
+        "image_url": "/timeline/images/comp_new/bach.png",
         "playlist_url": "https://soundcloud.com/dmitry-kotikov/sets/johann-sebastian-bach",
         "text": ""
       }
@@ -51,7 +51,9 @@
       "text": {
         "headline": "Domenico Scarlatti",
         "text": "",
-        "markdown_id": "domenico-scarlatti"
+        "markdown_id": "domenico-scarlatti",
+        "image_url": "/timeline/images/comp_new/scarlatti.jpg",
+        "playlist_url": "https://soundcloud.com/dmitry-kotikov/sets/domenico-scarlatti"
       }
     },
     {
@@ -64,7 +66,9 @@
       "text": {
         "headline": "George Frideric Handel",
         "text": "",
-        "markdown_id": "handel"
+        "markdown_id": "handel",
+        "image_url": "/timeline/images/comp_new/handel.jpg",
+        "playlist_url": "https://soundcloud.com/dmitry-kotikov/sets/george-frideric-handel"
       }
     },
     {
@@ -77,7 +81,9 @@
       "text": {
         "headline": "Joseph Haydn",
         "text": "",
-        "markdown_id": "haydn"
+        "markdown_id": "haydn",
+        "image_url": "/timeline/images/comp_new/haydn.jpg",
+        "playlist_url": "https://soundcloud.com/dmitry-kotikov/sets/joseph-haydn"
       }
     },
     {
@@ -90,7 +96,9 @@
       "text": {
         "headline": "Wolfgang Amadeus Mozart",
         "text": "",
-        "markdown_id": "mozart"
+        "markdown_id": "mozart",
+        "image_url": "/timeline/images/comp_new/mozart.jpg",
+        "playlist_url": "https://soundcloud.com/dmitry-kotikov/sets/wolfgang-amadeus-mozart"
       }
     },
     {
@@ -103,7 +111,9 @@
       "text": {
         "headline": "Ludwig van Beethoven",
         "text": "",
-        "markdown_id": "beethoven"
+        "markdown_id": "beethoven",
+        "image_url": "/timeline/images/comp_new/beethoven.jpg",
+        "playlist_url": "https://soundcloud.com/dmitry-kotikov/sets/ludwig-van-beethoven"
       }
     },
     {
@@ -116,20 +126,9 @@
       "text": {
         "headline": "Niccolò Paganini",
         "text": "",
-        "markdown_id": "paganini"
-      }
-    },
-    {
-      "start_date": {
-        "year": "1791"
-      },
-      "end_date": {
-        "year": "1857"
-      },
-      "text": {
-        "headline": "Carl Czerny",
-        "text": "",
-        "markdown_id": "carl-czerny"
+        "markdown_id": "paganini",
+        "image_url": "/timeline/images/comp_new/paganini.jpeg",
+        "playlist_url": "https://soundcloud.com/dmitry-kotikov/sets/niccolo-paganini"
       }
     },
     {
@@ -142,7 +141,24 @@
       "text": {
         "headline": "Franz Schubert",
         "text": "",
-        "markdown_id": "schubert"
+        "markdown_id": "schubert",
+        "image_url": "/timeline/images/comp_new/schubert.jpg",
+        "playlist_url": "https://soundcloud.com/dmitry-kotikov/sets/franz-schubert"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1803"
+      },
+      "end_date": {
+        "year": "1869"
+      },
+      "text": {
+        "headline": "Hector Berlioz",
+        "text": "",
+        "markdown_id": "berlioz",
+        "image_url": "/timeline/images/comp_new/berlioz.jpg",
+        "playlist_url": "https://soundcloud.com/dmitry-kotikov/sets/hector-berlioz"
       }
     },
     {
@@ -155,20 +171,9 @@
       "text": {
         "headline": "Mikhail Glinka",
         "text": "",
-        "markdown_id": "glinka"
-      }
-    },
-    {
-      "start_date": {
-        "year": "1804"
-      },
-      "end_date": {
-        "year": "1849"
-      },
-      "text": {
-        "headline": "Johann Strauss I",
-        "text": "",
-        "markdown_id": "johann-strauss-i"
+        "markdown_id": "glinka",
+        "image_url": "/timeline/images/comp_new/glinka.jpg",
+        "playlist_url": "https://soundcloud.com/dmitry-kotikov/sets/mikhail-glinka"
       }
     },
     {
@@ -181,7 +186,9 @@
       "text": {
         "headline": "Felix Mendelssohn",
         "text": "",
-        "markdown_id": "mendelssohn"
+        "markdown_id": "mendelssohn",
+        "image_url": "/timeline/images/comp_new/mendelssohn.jpg",
+        "playlist_url": "https://soundcloud.com/dmitry-kotikov/sets/felix-mendelssohn"
       }
     },
     {
@@ -194,7 +201,9 @@
       "text": {
         "headline": "Frédéric Chopin",
         "text": "",
-        "markdown_id": "chopin"
+        "markdown_id": "chopin",
+        "image_url": "/timeline/images/comp_new/chopin.jpeg",
+        "playlist_url": "https://soundcloud.com/dmitry-kotikov/sets/frederic-chopin"
       }
     },
     {
@@ -207,7 +216,9 @@
       "text": {
         "headline": "Robert Schumann",
         "text": "",
-        "markdown_id": "schumann"
+        "markdown_id": "schumann",
+        "image_url": "/timeline/images/comp_new/schumann.jpg",
+        "playlist_url": "https://soundcloud.com/dmitry-kotikov/sets/robert-schumann"
       }
     },
     {
@@ -220,7 +231,9 @@
       "text": {
         "headline": "Franz Liszt",
         "text": "",
-        "markdown_id": "liszt"
+        "markdown_id": "liszt",
+        "image_url": "/timeline/images/comp_new/liszt.jpg",
+        "playlist_url": "https://soundcloud.com/dmitry-kotikov/sets/liszt"
       }
     },
     {
@@ -233,7 +246,9 @@
       "text": {
         "headline": "Richard Wagner",
         "text": "",
-        "markdown_id": "wagner"
+        "markdown_id": "wagner",
+        "image_url": "/timeline/images/comp_new/wagner.jpg",
+        "playlist_url": "https://soundcloud.com/dmitry-kotikov/sets/richard-wagner"
       }
     },
     {
@@ -246,7 +261,9 @@
       "text": {
         "headline": "Giuseppe Verdi",
         "text": "",
-        "markdown_id": "verdi"
+        "markdown_id": "verdi",
+        "image_url": "/timeline/images/comp_new/verdi.jpg",
+        "playlist_url": "https://soundcloud.com/dmitry-kotikov/sets/giuseppe-verdi"
       }
     },
     {
@@ -259,7 +276,9 @@
       "text": {
         "headline": "Johann Strauss II",
         "text": "",
-        "markdown_id": "johann-strauss-ii"
+        "markdown_id": "johann-strauss-ii",
+        "image_url": "/timeline/images/comp_new/strauss.jpg",
+        "playlist_url": "https://soundcloud.com/dmitry-kotikov/sets/johann-strauss-ii"
       }
     },
     {
@@ -272,7 +291,9 @@
       "text": {
         "headline": "Johannes Brahms",
         "text": "",
-        "markdown_id": "brahms"
+        "markdown_id": "brahms",
+        "image_url": "/timeline/images/comp_new/brahms.jpg",
+        "playlist_url": "https://soundcloud.com/dmitry-kotikov/sets/johannes-brahms"
       }
     },
     {
@@ -285,7 +306,9 @@
       "text": {
         "headline": "Alexander Borodin",
         "text": "",
-        "markdown_id": "borodin"
+        "markdown_id": "borodin",
+        "image_url": "/timeline/images/comp_new/borodin.jpg",
+        "playlist_url": "https://soundcloud.com/dmitry-kotikov/sets/alexander-borodin"
       }
     },
     {
@@ -298,7 +321,9 @@
       "text": {
         "headline": "Camille Saint-Saëns",
         "text": "",
-        "markdown_id": "saint-saens"
+        "markdown_id": "saint-saens",
+        "image_url": "/timeline/images/comp_new/saint-saens.jpg",
+        "playlist_url": "https://soundcloud.com/dmitry-kotikov/sets/camille-saint-saens"
       }
     },
     {
@@ -311,7 +336,9 @@
       "text": {
         "headline": "Georges Bizet",
         "text": "",
-        "markdown_id": "bizet"
+        "markdown_id": "bizet",
+        "image_url": "/timeline/images/comp_new/bizet.jpg",
+        "playlist_url": "https://soundcloud.com/dmitry-kotikov/sets/georges-bizet"
       }
     },
     {
@@ -324,7 +351,9 @@
       "text": {
         "headline": "Modest Mussorgsky",
         "text": "",
-        "markdown_id": "mussorgsky"
+        "markdown_id": "mussorgsky",
+        "image_url": "/timeline/images/comp_new/musorgskiy.jpg",
+        "playlist_url": "https://soundcloud.com/dmitry-kotikov/sets/modest-mussorgsky"
       }
     },
     {
@@ -337,7 +366,9 @@
       "text": {
         "headline": "Pyotr Ilyich Tchaikovsky",
         "text": "",
-        "markdown_id": "tchaikovsky"
+        "markdown_id": "tchaikovsky",
+        "image_url": "/timeline/images/comp_new/tchaikovsky.jpg",
+        "playlist_url": "https://soundcloud.com/dmitry-kotikov/sets/pyotr-ilyich-tchaikovsky"
       }
     },
     {
@@ -350,7 +381,9 @@
       "text": {
         "headline": "Antonín Dvořák",
         "text": "",
-        "markdown_id": "dvorak"
+        "markdown_id": "dvorak",
+        "image_url": "/timeline/images/comp_new/dvorak.jpg",
+        "playlist_url": "https://soundcloud.com/dmitry-kotikov/sets/anton-dvorak"
       }
     },
     {
@@ -363,7 +396,9 @@
       "text": {
         "headline": "Edvard Grieg",
         "text": "",
-        "markdown_id": "grieg"
+        "markdown_id": "grieg",
+        "image_url": "/timeline/images/comp_new/grieg.jpg",
+        "playlist_url": "https://soundcloud.com/dmitry-kotikov/sets/edvard-grieg"
       }
     },
     {
@@ -376,7 +411,9 @@
       "text": {
         "headline": "Nikolai Rimsky-Korsakov",
         "text": "",
-        "markdown_id": "rimsky-korsakov"
+        "markdown_id": "rimsky-korsakov",
+        "image_url": "/timeline/images/comp_new/rimsky-korsakov.jpg",
+        "playlist_url": "https://soundcloud.com/dmitry-kotikov/sets/nikolai-rimsky-korsakov"
       }
     },
     {
@@ -389,7 +426,9 @@
       "text": {
         "headline": "Gustav Mahler",
         "text": "",
-        "markdown_id": "mahler"
+        "markdown_id": "mahler",
+        "image_url": "/timeline/images/comp_new/mahler.jpg",
+        "playlist_url": "https://soundcloud.com/dmitry-kotikov/sets/gustav-mahler"
       }
     },
     {
@@ -402,7 +441,9 @@
       "text": {
         "headline": "Claude Debussy",
         "text": "",
-        "markdown_id": "debussy"
+        "markdown_id": "debussy",
+        "image_url": "/timeline/images/comp_new/debussy.jpg",
+        "playlist_url": "https://soundcloud.com/dmitry-kotikov/sets/claude-debussy"
       }
     },
     {
@@ -415,7 +456,9 @@
       "text": {
         "headline": "Erik Satie",
         "text": "",
-        "markdown_id": "satie"
+        "markdown_id": "satie",
+        "image_url": "/timeline/images/comp_new/satie.jpg",
+        "playlist_url": "https://soundcloud.com/dmitry-kotikov/sets/erik-satie"
       }
     },
     {
@@ -428,7 +471,9 @@
       "text": {
         "headline": "Alexander Scriabin",
         "text": "",
-        "markdown_id": "scriabin"
+        "markdown_id": "scriabin",
+        "image_url": "/timeline/images/comp_new/scriabin.jpg",
+        "playlist_url": "https://soundcloud.com/dmitry-kotikov/sets/alexander-scriabin"
       }
     },
     {
@@ -441,7 +486,9 @@
       "text": {
         "headline": "Sergei Rachmaninoff",
         "text": "",
-        "markdown_id": "rachmaninoff"
+        "markdown_id": "rachmaninoff",
+        "image_url": "/timeline/images/comp_new/rachmaninoff.jpg",
+        "playlist_url": "https://soundcloud.com/dmitry-kotikov/sets/sergei-rachmaninoff"
       }
     },
     {
@@ -454,7 +501,24 @@
       "text": {
         "headline": "Maurice Ravel",
         "text": "",
-        "markdown_id": "ravel"
+        "markdown_id": "ravel",
+        "image_url": "/timeline/images/comp_new/ravel.jpg",
+        "playlist_url": "https://soundcloud.com/dmitry-kotikov/sets/maurice-ravel"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1881"
+      },
+      "end_date": {
+        "year": "1945"
+      },
+      "text": {
+        "headline": "Béla Bartók",
+        "text": "",
+        "markdown_id": "bartok",
+        "image_url": "/timeline/images/comp_new/bartok.jpg",
+        "playlist_url": "https://soundcloud.com/dmitry-kotikov/sets/bela-bartok"
       }
     },
     {
@@ -467,7 +531,9 @@
       "text": {
         "headline": "Igor Stravinsky",
         "text": "",
-        "markdown_id": "stravinsky"
+        "markdown_id": "stravinsky",
+        "image_url": "/timeline/images/comp_new/stravinsky.jpg",
+        "playlist_url": "https://soundcloud.com/dmitry-kotikov/sets/igor-stravinsky"
       }
     },
     {
@@ -480,7 +546,24 @@
       "text": {
         "headline": "Sergei Prokofiev",
         "text": "",
-        "markdown_id": "prokofiev"
+        "markdown_id": "prokofiev",
+        "image_url": "/timeline/images/comp_new/prokofiev.jpg",
+        "playlist_url": "https://soundcloud.com/dmitry-kotikov/sets/sergei-prokofiev"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1906"
+      },
+      "end_date": {
+        "year": "1975"
+      },
+      "text": {
+        "headline": "Dmitri Shostakovich",
+        "text": "",
+        "markdown_id": "shostakovich",
+        "image_url": "/timeline/images/comp_new/shostakovich.jpg",
+        "playlist_url": "https://soundcloud.com/dmitry-kotikov/sets/dmitri-shostakovich"
       }
     }
   ],

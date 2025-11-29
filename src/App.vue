@@ -34,9 +34,30 @@
         <ComposersTimeline />
       </section>
 
-      <section v-else-if="currentView === 'about'">
-        <h1>About</h1>
-        <p>Authors will be added soon.</p>
+      <section v-else-if="currentView === 'about'" class="about">
+        <div class="about__card">
+          <p class="about__eyebrow">About</p>
+          <h1 class="about__title">Understand classical music by ear</h1>
+          <p class="about__text">
+            Sometimes you hear a familiar melody and know it is classical music. But whose? Bach, Beethoven, or Mozart -
+            it can be hard to tell immediately.
+          </p>
+          <p class="about__text">
+            This site is designed to help you hear the character of each era and each composer, compare their stories
+            and musical voices, and never get lost in the names again.
+          </p>
+
+          <div class="about__author">
+            <img class="about__photo" src="/timeline/images/dk3.jpg" alt="Dmitrii Kotikov" loading="lazy" />
+            <div class="about__author-body">
+              <div class="about__author-label">Project creator and author</div>
+              <div class="about__author-name">Dmitrii Kotikov</div>
+              <a class="about__link" href="https://www.linkedin.com/in/dmitrykotikov/" target="_blank" rel="noreferrer">
+                Check out Dmitrii Kotikov’s profile on LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   </div>
@@ -68,6 +89,9 @@ const handlePopState = () => {
 onMounted(() => {
   // Set initial view based on current URL
   updateViewFromLocation();
+  if (window.location.pathname === '/about') {
+    currentView.value = 'about';
+  }
   // Listen for back/forward navigation
   window.addEventListener("popstate", handlePopState);
 });
@@ -98,6 +122,7 @@ function closeMenu() {
 }
 
 function returnToTitle() {
+  navigateTo('/');
   if (window.timeline && typeof window.timeline.goToStart === "function") {
     window.timeline.goToStart();
   }
@@ -105,6 +130,12 @@ function returnToTitle() {
 </script>
 
 <style scoped>
+.content {
+  position: relative;
+  height: calc(100vh - 48px);
+  overflow-y: auto;
+}
+
 .logo {
   height: 80%;
   object-fit: contain;
@@ -118,7 +149,104 @@ function returnToTitle() {
   cursor: pointer;
 }
 
+.about__card {
+  background: none;
+  border-radius: 0;
+  padding: 36px;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.about__eyebrow {
+  margin: 0 0 8px;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 12px;
+}
+
+.about__title {
+  margin: 0 0 18px;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.about__text {
+  margin: 0 0 14px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #1f2937;
+}
+
+.about__author {
+  margin-top: 28px;
+  padding: 18px;
+  border-radius: 14px;
+  border: 1px dashed rgba(148, 163, 184, 0.6);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.about__photo {
+  width: 50%;
+  max-width: 500px;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+.about__author-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.about__author-label {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6b7280;
+}
+
+.about__author-name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.about__link {
+  color: #2563eb;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  width: fit-content;
+}
+
+.about__link:hover {
+  border-bottom-color: currentColor;
+}
+
 @media (max-width: 640px) {
+  .about__card {
+    padding: 26px 22px;
+  }
+
+  .about__title {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+
+  .about__author {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about__photo {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
   .app-title {
     font-size: 20px;
   }

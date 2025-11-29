@@ -848,7 +848,7 @@ export function initKnightlabTimeline(containerId) {
       const link = event.target.closest(".facts-toggle");
       if (!link) return;
 
-       // On desktop we always show everything; just refresh layout.
+      // On desktop we always show everything; just refresh layout.
       if (!isMobileWidth()) {
         updateFactsVisibility();
         return;
@@ -944,7 +944,7 @@ export function initKnightlabTimeline(containerId) {
 
   function scheduleHeightRecalcAfterContent() {
     applyHeightForCurrentSlide();
-    setTimeout(applyHeightForCurrentSlide, 200);
+    setTimeout(applyHeightForCurrentSlide, 100);
     setTimeout(applyHeightForCurrentSlide, 1000);
   }
 
