@@ -280,7 +280,7 @@ function renderSoundCloudPlayer(container, tracks = [], playlistUrl = "") {
       if (!audio.src) {
         button.disabled = true;
         const previousText = button.textContent;
-        button.textContent = "Loading...";
+        button.textContent = "⏳";
 
         try {
           const url = await resolveSoundCloudStreamUrl(track);
@@ -458,35 +458,36 @@ export function initKnightlabTimeline(containerId) {
     4: 27, // 5 lines Haydn
     5: 37, // Mozart
     6: 37, // 6 lines Beethoven
-    7: 50, // 7 lines Paganini
-    8: 50,
-    9: 50,
-    10: 50,
-    11: 50,
-    12: 50,
-    13: 50,
-    14: 50,
-    15: 50,
-    16: 50,
-    17: 50,
-    18: 50,
-    19: 50,
-    20: 50,
-    21: 50,
-    22: 50,
-    23: 50,
-    24: 50,
-    25: 50,
-    26: 50,
-    27: 50,
-    28: 50,
-    29: 50,
-    30: 50,
-    31: 50,
-    32: 50, // Rachmaninoff
+    7: 40, // 7 lines Paganini
+    8: 40,
+    9: 40,
+    10: 40,
+    11: 40,
+    12: 40,
+    13: 40,
+    14: 40,
+    15: 40,
+    16: 40,
+    17: 40,
+    18: 40,
+    19: 40,
+    20: 40,
+    21: 40,
+    22: 40,
+    23: 40,
+    24: 40,
+    25: 40,
+    26: 40,
+    27: 40,
+    28: 40,
+    29: 40,
+    30: 40,
+    31: 40,
+    32: 40, // Rachmaninoff
     33: 37,
     34: 27,
     35: 27,
+    36: 27
     // add more indexes here if needed
   };
 
